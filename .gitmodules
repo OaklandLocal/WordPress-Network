@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/quercus"]
+	path = wp-content/themes/quercus
+	url = git@github.com:OaklandLocal/quercus.git
