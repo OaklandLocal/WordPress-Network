@@ -6,6 +6,7 @@
  * First Introduced: 2.0
  * Sort Order: 4
  * Requires Connection: Yes
+ * Auto Activate: Yes
  */
 
 add_action( 'jetpack_modules_loaded', array( 'Jetpack_Post_By_Email', 'init' ) );
@@ -45,7 +46,7 @@ class Jetpack_Post_By_Email {
 		$jetpack->sync->register( 'noop' );
 	}
 
-	function configuration_redirect() {
+	static function configuration_redirect() {
 		wp_safe_redirect( get_edit_profile_url( get_current_user_id() ) . '#post-by-email' );
 		exit;
 	}
