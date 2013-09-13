@@ -14,6 +14,10 @@ include_once('section-widget-options-page.php');
  * @extends WP_Widget
  */
 class OLT_Tabbed_Section_Widget extends WP_Widget {
+
+
+	public static $widget_ids = array();
+
     /**
      * OLT_Tabbed_Section_Widget function.
      * 
@@ -24,7 +28,12 @@ class OLT_Tabbed_Section_Widget extends WP_Widget {
         $widget_ops = array('classname' => 'section-widget-tabbed', 'description' => __('Display section-specific content in tabs.'));
         $control_ops = array('width' => 400);
         $this->WP_Widget('section-tabbed', __('Section (Tabbed)'), $widget_ops, $control_ops);
+        
+        
     }
+    
+
+    
     /**
      * widget function.
      * 
@@ -52,15 +61,53 @@ class OLT_Tabbed_Section_Widget extends WP_Widget {
             
             $list = '';
             $content = '';
+           
+            if( is_array(  get_theme_support('tabs') ) ) {
+            	$current_tabs_theme_support = reset( get_theme_support('tabs') );
+            } else {
+            	$current_tabs_theme_support = false;
+            }
             
+            
+            if ( $current_tabs_theme_support == 'twitter-bootstrap' ) {
+            foreach($instance['tabs'] as $id => $tab) {
+           
+            if ( $id == 0 ):
+            	$list .= "<li class=\"active\">";
+            else:
+            	$list .= "<li>";
+            endif;
+           		$list .= "<a href=\"#{$widget_id}-tab-{$id}\">{$tab['title']}</a></li>";
+           		
+           		
+           	if ( $id == 0 ):
+           		$content .= "<div class=\"tab-pane active\" ";
+           	else:
+           		$content .= "<div class=\"tab-pane\" ";
+           	endif;
+           	
+				$content .= "id=\"{$widget_id}-tab-{$id}\">".do_shortcode($tab['body']).'</div>';
+            }
+            } else {
             foreach($instance['tabs'] as $id => $tab) {
                 $list .= "<li><a href=\"#{$widget_id}-tab-{$id}\">{$tab['title']}</a></li>";
                 $content .= "<div id=\"{$widget_id}-tab-{$id}\">".do_shortcode($tab['body']).'</div>';
             }
-            
+            }
             $heightFixClass = ($heightfix)? ' class="swt-height-fix"' : '';
+            if ( $current_tabs_theme_support == 'twitter-bootstrap' ) {            
+            $html = '<ul class="nav nav-tabs" id="'.$widget_id.'">';
+            #$html .= 
+            $html .= $list;
+            $html .= '</ul>';
+            $html .= "<div class='tab-content'>";
+            $html .= $content;
+            $html .= "</div>";
+            } else {
+
+	        $html = "<ul{$heightFixClass}>".$list.'</ul>'.$content;
             
-            $html = "<ul{$heightFixClass}>".$list.'</ul>'.$content;
+            }
             
             echo $before_widget;
             
@@ -69,9 +116,27 @@ class OLT_Tabbed_Section_Widget extends WP_Widget {
                 echo apply_filters('widget_title', $instance['title']);
                 echo $after_title;
             }
+            
+            if ( $current_tabs_theme_support == 'twitter-bootstrap' ) {
+            	
+            	
+            
+            echo apply_filters('widget_text', $html);
+            
+            if ( is_null(self::$widget_ids) ) {
+            	self::$widget_ids = array ( $widget_id );
+            } else {
+            	array_push(self::$widget_ids, $widget_id);
+            }
+
+            ?>
+       
+            <?php
+            } else {        
             echo '<div class="swt-outter"><div class="swt-wrapper">';
             echo apply_filters('widget_text', $html);
             echo '</div></div>';
+            }
             echo $after_widget;
         }
     }
@@ -211,10 +276,10 @@ class OLT_Tabbed_Section_Widget extends WP_Widget {
             <input type="hidden" name="nameprefix" value="<?php echo $this->get_field_name('tabs') ?>" />
             <input type="hidden" name="<?php echo $this->get_field_name('order') ?>" class="olt-swt-order" />
             <div class="olt-swt-designer-wrapper" id="<?php echo $this->get_field_id('designer-wrapper') ?>">
-                <div class="olt-swt-designer-main" id="<?php echo $this->get_field_id('designer-main') ?>">
+                <div  id="<?php echo $this->get_field_id('designer-main') ?>" class="olt-swt-designer-main">
                     <ul>
                         <?php foreach($tabs as $id => $tab): ?>
-                        <li class="olt-swt-designer-tab" id="<?php echo $this->get_field_id('tab-id-'.$id); ?>">
+                        <li class="olt-swt-designer-tab" id="<?php echo $this->get_field_id('tab-'.$id); ?>-list">
                             <a href="#<?php echo $this->get_field_id('tab-'.$id); ?>" id="<?php echo $this->get_field_id('tab-'.$id.'-title-link'); ?>">
                                 <?php echo esc_html($tab['title']); ?>
                             </a>
@@ -225,12 +290,12 @@ class OLT_Tabbed_Section_Widget extends WP_Widget {
                         </li>
                     </ul>
                     <?php foreach($tabs as $id => $tab): ?>
-                    <div id="<?php echo $this->get_field_id('tab-'.$id) ?>">
+                    <div id="<?php echo $this->get_field_id('tab-'.$id) ?>" class="olt-swt-designer-panel">
                         <div class="olt-swt-designer-top">
                             <label for="<?php echo $this->get_field_id('tab-'.$id.'-title'); ?>"><?php _e('Title:','section-widget'); ?></label>
                             <input id="<?php echo $this->get_field_id('tab-'.$id.'-title'); ?>" class="olt-swt-designer-tab-title" name="<?php echo $this->get_field_name('tabs')."[$id][title]"; ?>" type="text" value="<?php echo esc_attr($tab['title']); ?>" />
                             <p class="olt-swt-designer-tabs-controls olt-swt-designer-delete-tab">
-                                <a href="#"><span class="ui-icon ui-icon-trash" style="float:left;margin-right:.3em;margin-top: -2px;"></span><?php _e('Delete this tab','section-widget');?></a>
+                                <a href="#" id="<?php echo $this->get_field_id('tab-'.$id) ?>-delete"><span class="ui-icon ui-icon-trash" style="float:left;margin-right:.3em;margin-top: -2px;"></span><?php _e('Delete this tab','section-widget');?></a>
                             </p>
                         </div>
                         <div class="olt-sw-body">
@@ -244,10 +309,11 @@ class OLT_Tabbed_Section_Widget extends WP_Widget {
             </div>
         </div>
         <script type="text/javascript">
+        	//console.log('<?php echo $this->get_field_id('designer-main'); ?>', '<?php echo $this->get_field_id('conditions-wrapper'); ?>');
             if(typeof OLTChecklistPaneInit == 'function')
                 OLTChecklistPaneInit(jQuery('#<?php echo $this->get_field_id('conditions-wrapper'); ?>'));
             if(typeof OLTSWTInit == 'function')
-                OLTSWTInit(jQuery('#<?php echo $this->get_field_id('designer-main') ?>'));
+                OLTSWTInit(jQuery('#<?php echo $this->get_field_id('designer-wrapper') ?>'));
         </script>
 <?php
     }
@@ -268,35 +334,63 @@ function tabbed_section_widget_init() {
  * @return void
  */
 function tabbed_section_widget_load_scripts() {
+    
     extract(wp_parse_args((array) get_option('section-widget-settings'), array(
         'theme' => 'redmond',
         'scope' => '.swt-outter',
         'heightfix' => false
     )));
     
-    if(is_admin() ) {
+    $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+    	
+    if(is_admin() ):
     	global $pagenow;
+    	
     	if( $pagenow == 'widgets.php' ):
     	
         	if($theme == 'none') $theme = 'base';
         	
-        	wp_enqueue_style('section-widget-admin', plugins_url('section-widget/section-widget-admin.css'));
-        	wp_enqueue_style("section-widget-theme-{$theme}", plugins_url("section-widget/themes/theme-loader.php?theme={$theme}&scope=.olt-swt-designer"));
-        	wp_enqueue_script('section-widget-admin', plugins_url('section-widget/section-widget-admin.js'), array('jquery','jquery-ui-tabs','jquery-ui-sortable'));
+        	wp_enqueue_style( 'section-widget-admin', plugins_url('section-widget/js/section-widget-admin'. $suffix.'.css') );
+        	wp_enqueue_style( "section-widget-theme-{$theme}", plugins_url("section-widget/themes/theme-loader.php?theme={$theme}&scope=.olt-swt-designer"));
+        	wp_enqueue_script('section-widget-admin', plugins_url('section-widget/js/section-widget-tabs'. $suffix.'.js'), array('jquery','jquery-ui-tabs','jquery-ui-sortable'));
+        	
+        elseif( $pagenow == 'themes.php' && $_GET['page'] == 'section-widget' ):
+        	wp_enqueue_script('section-widget-admin', plugins_url('section-widget/js/section-widget-admin'. $suffix.'.js'), array('jquery','jquery-ui-tabs','jquery-ui-sortable'));
+        
         endif;
-    } else {
-        // Only load script and css if there is at least one active tabbed widget
-        if(is_active_widget(false,false,'section-tabbed')) {    
-            if($theme != 'none')
-                wp_enqueue_style("section-widget-theme-{$theme}", plugins_url("section-widget/themes/theme-loader.php?theme={$theme}&scope=").urlencode($scope));
-            
-            wp_enqueue_script('section-widget', plugins_url('section-widget/section-widget.js'), array('jquery','jquery-ui-tabs'));
-        }
-    }
+   else:
+	        // Only load script and css if there is at least one active tabbed widget
+	        if( is_active_widget( false, false, 'section-tabbed' ) ):   
+	            if($theme != 'none'):
+	                wp_enqueue_style("section-widget-theme-{$theme}", 
+	                plugins_url("section-widget/themes/theme-loader.php?theme={$theme}&scope=").urlencode($scope));
+	      		endif;
+	      	
+	      	$current_tabs_theme_support = false;
+	      	if( is_array( get_theme_support('tabs') ) )
+	        	$current_tabs_theme_support = reset( get_theme_support('tabs') );
+         
+	         if ( $current_tabs_theme_support != 'twitter-bootstrap' ):
+	         	wp_enqueue_script('section-widget', 
+	           		plugins_url('section-widget/js/section-widget'. $suffix.'.js'), array('jquery','jquery-ui-tabs') );
+	           
+	         endif;   // uses_twitter_bootstrap ?
+           
+    	endif;
+    endif; // is_admin
 }
 
 ### Function: Init Section Widget
 add_action('widgets_init', 'tabbed_section_widget_init');
 add_action('init', 'tabbed_section_widget_load_scripts');
+add_action('wp_footer', 'print_script');
 
-?>
+function print_script() {
+	echo '<script type="text/javascript">';
+	#foreach ( OLT_Tabbed_Section_Widget::$widget_ids as $widget_id ) { ?>
+	jQuery(function () { jQuery('.nav-tabs a').click(function (e) { e.preventDefault();
+	jQuery(this).tab('show'); }) });
+
+<?php 
+	echo '</script>';
+}

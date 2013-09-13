@@ -1,5 +1,4 @@
 /* Tabbed section widget */
-
 jQuery(document).ready(function($){    
     $('.swt-wrapper').tabs();
     

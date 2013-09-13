@@ -9,13 +9,22 @@ div.olt-sw-body {
     border-color: #dfdfdf;
 }
 
+.olt-swt-designer .ui-tabs .ui-tabs-nav .olt-swt-designer-add-tab {
+    position: absolute;
+    right: 0;
+    top: -34px;
+}
+
+.olt-swt-designer .ui-tabs{
+	margin-top: 30px;
+}
 div.olt-sw-body p.olt-sw-body-help {
     padding: 6px 0.9em 6px 0.9em;
     margin: 0;
     font-size: 11px;
     color: #333333;
     background-color: #ededed;
-    background-image: url(olt-checklist/gray-grad.png);
+    background-image: url(../olt-checklist/gray-grad.png);
     background-position: bottom;
     background-repeat: repeat-x;
 }
