@@ -4,3 +4,6 @@
 [submodule "wp-content/themes/owly"]
 	path = wp-content/themes/owly
 	url = https://allthecod.es/oaklandlocal/owly.git
+[submodule "wp-content/plugins/geo-mashup-custom"]
+	path = wp-content/plugins/geo-mashup-custom
+	url = https://allthecod.es/oaklandlocal/geo-mashup-custom.git
