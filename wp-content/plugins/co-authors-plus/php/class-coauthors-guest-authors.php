@@ -305,8 +305,12 @@ class CoAuthors_Guest_Authors
 		if ( !isset( $query->query_vars['author_name'] ) )
 			return $query;
 
+		// No redirection needed on admin requests
+		if ( is_admin() )
+			return $query;
+
 		$coauthor = $this->get_guest_author_by( 'linked_account', sanitize_title( $query->query_vars['author_name'] ) );
-		if ( is_object( $coauthor ) && $query->query_vars['author_name'] != $coauthor->linked_account ) {
+		if ( is_object( $coauthor ) && $query->query_vars['author_name'] != $coauthor->user_login ) {
 			global $wp_rewrite;
 			$link = $wp_rewrite->get_author_permastruct();
 
@@ -344,11 +348,11 @@ class CoAuthors_Guest_Authors
 		global $pagenow;
 		// Enqueue our guest author CSS on the related pages
 		if ( $this->parent_page == $pagenow && isset( $_GET['page'] ) && $_GET['page'] == 'view-guest-authors' ) {
-			wp_enqueue_script( 'jquery-select2', COAUTHORS_PLUS_URL . 'lib/select2/select2.min.js', array( 'jquery' ), COAUTHORS_PLUS_VERSION );
-			wp_enqueue_style( 'cap-jquery-select2-css', COAUTHORS_PLUS_URL . 'lib/select2/select2.css', false, COAUTHORS_PLUS_VERSION );
+			wp_enqueue_script( 'jquery-select2', plugins_url( 'lib/select2/select2.min.js', dirname( __FILE__ ) ), array( 'jquery' ), COAUTHORS_PLUS_VERSION );
+			wp_enqueue_style( 'cap-jquery-select2-css', plugins_url( 'lib/select2/select2.css', dirname( __FILE__ ) ), false, COAUTHORS_PLUS_VERSION );
 
-			wp_enqueue_style( 'guest-authors-css', COAUTHORS_PLUS_URL . 'css/guest-authors.css', false, COAUTHORS_PLUS_VERSION );
-			wp_enqueue_script( 'guest-authors-js', COAUTHORS_PLUS_URL . 'js/guest-authors.js', false, COAUTHORS_PLUS_VERSION );
+			wp_enqueue_style( 'guest-authors-css', plugins_url( 'css/guest-authors.css', dirname( __FILE__ ) ), false, COAUTHORS_PLUS_VERSION );
+			wp_enqueue_script( 'guest-authors-js', plugins_url( 'js/guest-authors.js', dirname( __FILE__ ) ), false, COAUTHORS_PLUS_VERSION );
 		} else if ( in_array( $pagenow, array( 'post.php', 'post-new.php' ) ) && $this->post_type == get_post_type() ) {
 			add_action( 'admin_head', array( $this, 'change_title_icon' ) );
 		}
@@ -708,10 +712,14 @@ class CoAuthors_Guest_Authors
 				update_post_meta( $post_id, $key, $user_login );
 				continue;
 			}
+
+			if ( isset( $author_field['type'] ) && 'checkbox' === $author_field['type'] && ! isset( $_POST[ $key ] ) )
+				delete_post_meta( $post_id, $key );
+
 			if ( !isset( $_POST[$key] ) )
 				continue;
-			if ( isset( $author_field['sanitize_function'] ) && function_exists( $author_field['sanitize_function'] ) )
-				$value = $author_field['sanitize_function']( $_POST[$key] );
+			if ( isset( $author_field['sanitize_function'] ) && is_callable( $author_field['sanitize_function'] ) )
+				$value = call_user_func( $author_field['sanitize_function'], $_POST[$key] );
 			else
 				$value = sanitize_text_field( $_POST[$key] );
 			update_post_meta( $post_id, $key, $value );
@@ -736,25 +744,33 @@ class CoAuthors_Guest_Authors
 	function get_guest_author_by( $key, $value, $force = false ) {
 		global $wpdb;
 
-		$cache_key = md5( 'guest-author-' . $key . '-' . $value );
-		if ( false == $force && false !== ( $retval = wp_cache_get( $cache_key, self::$cache_group ) ) )
-			return $retval;
+		$cache_key = $this->get_cache_key( $key, $value );
+
+		if ( false == $force && false !== ( $retval = wp_cache_get( $cache_key, self::$cache_group ) ) ) {
+			// Properly catch our false condition cache
+			if ( is_object( $retval ) )
+				return $retval;
+			else
+				return false;
+		}
 
 		switch( $key ) {
 			case 'ID':
 			case 'id':
 				$query = $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE ID=%d", $value );
 				$post_id = $wpdb->get_var( $query );
-				if ( empty( $post_id ) )
-					return false;
+				if ( empty( $post_id ) ) {
+					$post_id = '0';
+				}
 				break;
 			case 'user_nicename':
 			case 'post_name':
 				$value = $this->get_post_meta_key( $value );
 				$query = $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_name=%s AND post_type = %s", $value, $this->post_type );
 				$post_id = $wpdb->get_var( $query );
-				if ( empty( $post_id ) )
-					return false;
+				if ( empty( $post_id ) ) {
+					$post_id = '0';
+				}
 				break;
 			case 'login':
 			case 'user_login':
@@ -770,16 +786,19 @@ class CoAuthors_Guest_Authors
 				if ( empty( $post_id ) ) {
 					if ( 'user_login' == $key )
 						return $this->get_guest_author_by( 'post_name', $value ); // fallback to post_name in case the guest author isn't a linked account
-					return false;
+					$post_id = '0';
 				}
 				break;
 			default:
-				$post_id = false;
+				$post_id = '0';
 				break;
 		}
 
-		if ( !$post_id )
+		if ( ! $post_id ) {
+			// Best hacky way to cache the false condition
+			wp_cache_set( $cache_key, '0', self::$cache_group );
 			return false;
+		}
 
 		$guest_author = array(
 			'ID' => $post_id,
@@ -802,6 +821,31 @@ class CoAuthors_Guest_Authors
 		wp_cache_set( $cache_key, (object)$guest_author, self::$cache_group );
 
 		return (object)$guest_author;
+	}
+
+	/**
+	 * Get an thumbnail for a Guest Author object
+	 *
+	 * @param 	object 	The Guest Author object for which to retrieve the thumbnail
+	 * @param 	int 	The desired image size
+	 * @return 	string 	The thumbnail image tag, or null if one doesn't exist
+	 */
+	function get_guest_author_thumbnail( $guest_author, $size ) {
+		// See if the guest author has an avatar
+		if ( ! has_post_thumbnail( $guest_author->ID ) )
+			return null;
+
+		$args = array(
+				'class' => "avatar avatar-{$size} photo",
+			);
+		if ( in_array( $size, $this->avatar_sizes ) )
+			$size = 'guest-author-' . $size;
+		else
+			$size = array( $size, $size );
+
+		$thumbnail = get_the_post_thumbnail( $guest_author->ID, $size, $args );
+
+		return $thumbnail;
 	}
 
 	/**
@@ -905,6 +949,36 @@ class CoAuthors_Guest_Authors
 	}
 
 	/**
+	 * Build a cache key for a given key/value
+	 *
+	 * @param string $key A guest author field
+	 * @param string $value The guest author field value
+	 * 
+	 * @return string The generated cache key
+	 */
+	function get_cache_key( $key, $value ) {
+		// Normalize $key and $value
+		switch( $key ) {
+			case 'post_name':
+				$key = 'user_nicename';
+
+				if ( 0 === strpos( $value, 'cap-' ) )
+					$value = substr( $value, 4 );
+
+				break;
+
+			case 'login':
+				$key = 'user_login';
+
+				break;
+		}
+
+		$cache_key = md5( 'guest-author-' . $key . '-' . $value );
+
+		return $cache_key;
+	}
+
+	/**
 	 * Get all of the user accounts that have been linked
 	 *
 	 * @since 3.0
@@ -977,11 +1051,15 @@ class CoAuthors_Guest_Authors
 		$keys = wp_list_pluck( $this->get_guest_author_fields(), 'key' );
 		$keys = array_merge( $keys, array( 'login', 'post_name', 'user_nicename', 'ID' ) );
 		foreach( $keys as $key ) {
+			$value_key = $key;
+
 			if ( 'post_name' == $key )
-				$key = 'user_nicename';
+    			$value_key = 'user_nicename';
 			else if ( 'login' == $key )
-				$key = 'user_login';
-			$cache_key = md5( 'guest-author-' . $key . '-' . $guest_author->$key );
+    			$value_key = 'user_login';
+
+			$cache_key = $this->get_cache_key( $key, $guest_author->$value_key );
+
 			wp_cache_delete( $cache_key, self::$cache_group );
 		}
 
@@ -1177,7 +1255,6 @@ class CoAuthors_Guest_Authors
 	 * @since 3.0
 	 */
 	function filter_get_avatar( $avatar, $id_or_email, $size, $default ) {
-
 		if ( is_object( $id_or_email ) || !is_email( $id_or_email ) )
 			return $avatar;
 
@@ -1186,18 +1263,10 @@ class CoAuthors_Guest_Authors
 		if ( ! $guest_author )
 			return $avatar;
 
-		// See if the guest author as an avatar
-		if ( ! has_post_thumbnail( $guest_author->ID ) )
-			return $avatar;
+		$thumbnail = $this->get_guest_author_thumbnail( $guest_author, $size );
 
-		$args = array(
-				'class' => "avatar avatar-{$size} photo",
-			);
-		if ( in_array( $size, $this->avatar_sizes ) )
-			$size = 'guest-author-' . $size;
-		else
-			$size = array( $size, $size );
-		$avatar = get_the_post_thumbnail( $guest_author->ID, $size, $args );
+		if ( $thumbnail )
+			return $thumbnail;
 
 		return $avatar;
 	}

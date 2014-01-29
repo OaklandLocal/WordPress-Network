@@ -1,6 +1,6 @@
 <?php
 
-function get_coauthors( $post_id = 0, $args = array() ) {
+function get_coauthors( $post_id = 0 ) {
 	global $post, $post_ID, $coauthors_plus, $wpdb;
 	
 	$coauthors = array();
@@ -9,12 +9,9 @@ function get_coauthors( $post_id = 0, $args = array() ) {
 		$post_id = $post_ID;
 	if ( !$post_id && $post )
 		$post_id = $post->ID;
-
-	$defaults = array('orderby'=>'term_order', 'order'=>'ASC');
-	$args = wp_parse_args( $args, $defaults );
 	
 	if ( $post_id ) {
-		$coauthor_terms = get_the_terms( $post_id, $coauthors_plus->coauthor_taxonomy, $args );
+		$coauthor_terms = get_the_terms( $post_id, $coauthors_plus->coauthor_taxonomy );
 		
 		if ( is_array( $coauthor_terms ) && !empty( $coauthor_terms ) ) {
 			foreach( $coauthor_terms as $coauthor ) {
@@ -169,8 +166,8 @@ function coauthors__echo( $tag, $type = 'tag', $separators = array(), $tag_args 
 			$output .= $separators['between'];
 		
 		if ( $i->is_last() && $i->count() > 1 ) {
-			$output = rtrim( $output, " {$separators['between']}" );
-			$output .= ' ' . $separators['betweenLast'];
+			$output = rtrim( $output, $separators['between'] );
+			$output .= $separators['betweenLast'];
 		}
 		
 		$output .= $author_text;
@@ -230,19 +227,24 @@ function coauthors_posts_links( $between = null, $betweenLast = null, $before = 
  */
 function coauthors_posts_links_single( $author ) {
 	$args = array(
+		'before_html' => '',
 		'href' => get_author_posts_url( $author->ID, $author->user_nicename ),
 		'rel' => 'author',
 		'title' => sprintf( __( 'Posts by %s', 'co-authors-plus' ), get_the_author() ),
+		'class' => 'url fn',
 		'text' => get_the_author(),
+		'after_html' => ''
 	);
 	$args = apply_filters( 'coauthors_posts_link', $args, $author );
-	return sprintf(
-			'<a href="%1$s" title="%2$s" rel="%3$s">%4$s</a>',
+	$single_link = sprintf(
+			'<a href="%1$s" title="%2$s" class="%3$s" rel="%4$s">%5$s</a>',
 			esc_url( $args['href'] ),
 			esc_attr( $args['title'] ),
+			esc_attr( $args['class'] ),
 			esc_attr( $args['rel'] ),
 			esc_html( $args['text'] )
 	);
+	return $args['before_html'] . $single_link . $args['after_html'];
 }
 
 /**
@@ -315,6 +317,24 @@ function coauthors_links($between = null, $betweenLast = null, $before = null, $
 		'before' => $before,
 		'after' => $after
 	), null, $echo );
+}
+
+/**
+ * Outputs the co-authors email addresses
+ *
+ * @param string $between Delimiter that should appear between the email addresses
+ * @param string $betweenLast Delimiter that should appear between the last two email addresses
+ * @param string $before What should appear before the presentation of email addresses
+ * @param string $after What should appear after the presentation of email addresses
+ * @param bool $echo Whether the co-authors should be echoed or returned. Defaults to true.
+ */
+function coauthors_emails($between = null, $betweenLast = null, $before = null, $after = null, $echo = true ) {
+	return coauthors__echo('get_the_author_meta', 'tag', array(
+		'between' => $between,
+		'betweenLast' => $betweenLast,
+		'before' => $before,
+		'after' => $after
+	), 'user_email', $echo );
 }
 
 /**
@@ -489,4 +509,38 @@ function coauthors_wp_list_authors( $args = array() ) {
 	if ( ! $args['echo'] )
 		return $return;
 	echo $return;
+}
+
+/**
+ * Retrieve a Co-Author's Avatar.
+ *
+ * Since Guest Authors doesn't enforce unique email addresses, simply loading the avatar by email won't work when
+ * multiple Guest Authors share the same address.
+ *
+ * This is a replacement for using get_avatar(), which only operates on email addresses and cannot differentiate 
+ * between Guest Authors (who may share an email) and regular user accounts
+ * 
+ * @param  object   $coauthor The Co Author or Guest Author object
+ * @param  int      $size     The desired size
+ * @return string             The image tag for the avatar, or an empty string if none could be determined
+ */
+function coauthors_get_avatar( $coauthor, $size = 32, $default = '', $alt = false ) {
+	global $coauthors_plus;
+
+	if ( ! is_object( $coauthor ) )
+		return '';
+
+	if ( isset( $coauthor->type ) && 'guest-author' == $coauthor->type ) {
+		$guest_author_thumbnail = $coauthors_plus->guest_authors->get_guest_author_thumbnail( $coauthor, $size );
+
+		if ( $guest_author_thumbnail )
+			return $guest_author_thumbnail;
+	}
+
+	// Make sure we're dealing with an object for which we can retrieve an email
+	if ( isset( $coauthor->user_email ) )
+		return get_avatar( $coauthor->user_email, $size, $default, $alt );
+
+	// Nothing matched, an invalid object was passed.
+	return '';
 }
