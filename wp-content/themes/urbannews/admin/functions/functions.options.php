@@ -337,6 +337,12 @@ $of_options[] = array( "name" => __('Breaking News Text', 'siiimple'),
 					"id" => "breaking_news",
 					"std" => "Breaking News",
 					"type" => "text");
+
+$of_options[] = array( "name" => __('Ticker Number', 'siiimple'),
+					"desc" => __('Add the number of items you wish to show in the ticker.', 'siiimple'),
+					"id" => "ticker_num",
+					"std" => "",
+					"type" => "text");
 					
 $of_options[] = array( "name" => __('Ticker Category', 'siiimple'),
 					"desc" => __('Choose the category you want to use to display in the ticker.  To show all categories choose the top (blank) option.', 'siiimple'),

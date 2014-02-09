@@ -11,7 +11,7 @@
 
 <h2 class="no-image"><span class="date-area"><?php the_time('F jS, Y') ?></span><br/><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 	
-	<img src="<?php echo $image ?>" class="single-img" alt="image"/>
+	<a href="<?php the_permalink(); ?>"><img src="<?php echo $image ?>" class="single-img" alt="image"/></a>
 	
 <?php } else if (!$image){?>
 

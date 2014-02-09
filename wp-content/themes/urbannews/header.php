@@ -215,7 +215,7 @@
 		
 				<?php 
 				$count=0;
-				$args=array( 'showposts' => '-1','cat' => $data['ticker'] );  $my_query = new WP_Query($args);
+				$args=array( 'showposts' => $data['ticker_num'],'cat' => $data['ticker'] );  $my_query = new WP_Query($args);
 				if ( $my_query->have_posts()  ) { while ($my_query->have_posts()) : $my_query->the_post(); 
 				$count++;
 				?>

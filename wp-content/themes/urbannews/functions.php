@@ -47,6 +47,9 @@ function siiimple_scripts_function() {
 	//PANEL SLIDER
 	wp_enqueue_script('slide', get_template_directory_uri() . '/framework/js/slide.js', array('jquery'), '', false);
 	
+	wp_enqueue_script('eq-height', get_template_directory_uri() . '/framework/js/jquery.eqheight.js', array('jquery'), '', false);
+	wp_enqueue_script('eq-height-init', get_template_directory_uri() . '/framework/js/jquery.eqheight-init.js', array('jquery'), '', false);
+	
 	if( is_page_template('template-tabs.php') ) {
 	
 		wp_enqueue_script('tabs', get_template_directory_uri() . '/framework/js/tabs.js', array('jquery'), '', true);
@@ -289,7 +292,7 @@ function siiimple_custom_css() {
 		//TOP BUTTON BACKGROUND
 		if(!empty($data['general_color'])) {
 			
-			$custom_css .= 'span.date-area,a.flex-active,.sf-menu li:hover,.sf-menu .current-menu-item,#section-three .thumb-wrap h2 a:hover,.btt:hover,#single .img-wrap h2 a:hover,.paginate .page-numbers.current,.paginate a.page-numbers:hover,.carousel .mask h2 a:hover,a.photo-gallery.extend:hover,a.page-link:hover,#sections-video.carousel ul li:hover .icon-eye,.blog_gallery .flex-control-paging li a:hover,.blog_gallery .flex-control-paging li a.flex-active,.bottom_slider ol.flex-control-nav.flex-control-paging li a.flex-active,#sections-bottom .bottom_slider h2 a:hover,.main_flexslider h2 a:hover,span.date-area,.main_flexslider p.date-main,.main_flexslider .flex-control-paging li a:hover,.blog_gallery .flex-control-paging li a:hover,#nav #uniform-undefined.selector:hover, #respond p.form-submit input#submit { background:'.$data['general_color'].' !important; }';
+			$custom_css .= 'span.date-area,a.flex-active,.sf-menu li:hover,.sf-menu .current-menu-item,#section-three .thumb-wrap h2 a:hover,.btt:hover,#single .img-wrap h2 a:hover,.paginate .page-numbers.current,.paginate a.page-numbers:hover,.carousel .mask h2 a:hover,a.photo-gallery.extend:hover,a.page-link:hover,#sections-video.carousel ul li:hover .icon-eye,.blog_gallery .flex-control-paging li a:hover,.blog_gallery .flex-control-paging li a.flex-active,.bottom_slider ol.flex-control-nav.flex-control-paging li a.flex-active,#sections-bottom .bottom_slider h2 a:hover,.main_flexslider h2 a:hover,span.date-area,.main_flexslider p.date-main,.main_flexslider .flex-control-paging li a:hover,.blog_gallery .flex-control-paging li a:hover,#nav #uniform-undefined.selector:hover, #respond p.form-submit input#submit, .idTabs a.selected { background:'.$data['general_color'].' !important; }';
 			
 			$custom_css .= ' h2 a:hover,h3 a:hover,h4 a:hover,a:hover,a:focus,h2.sub-header,#section-five ul li a:hover,#single #related_posts ul li a,#single #related_posts.bottom-single-related ul li h2 a:hover,#single #related_posts.bottom-single-related ul li h2 a:hover,a.comment-reply-link,.blog-template .right-content p a,span.logo-news,#wrapper dt a,.carousel .pagination-links li.current a,#sections-bottom .bottom_slider ol.flex-control-nav.flex-control-paging li a.flex-active,.post .content-wrap ul li a,.post .content-wrap ol li a { color:'.$data['general_color'].' !important; }';	
 			

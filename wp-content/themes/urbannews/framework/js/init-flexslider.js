@@ -7,8 +7,8 @@ j(window).load(function() {
      start: function(slider) {
   		slider.removeClass('loading');
 	},
+	slideshow: true,
 	animation: "slide",
-	slideshow: false,
 	slideshowSpeed: 7000,
     pauseOnHover: true,
     video: false,

@@ -60,11 +60,9 @@ get_header();
 	  	    				<?php foreach ($attachments as $attachment) : ?>
                         	
 	  	    				<?php $attachment_url = wp_get_attachment_url($attachment->ID , 'full');  ?>
-							<?php $image_gallery = aq_resize($attachment_url, 653, true); //resize & retain image proportions (soft crop) ?>
+							<?php $image_gallery = aq_resize($attachment_url, 653, true); ?>
 				
-								<li><img src="<?php echo $image_gallery ?>"/>
-								
-								</li>
+								<li><img src="<?php echo $image_gallery ?>"/></li>
 					
 		  	    			<?php endforeach; ?>
                         
@@ -105,7 +103,7 @@ get_header();
 				
 				<li class="posted"><?php the_time('M j, Y') ?></li>
 				
-				<li class="written"><?php the_author_meta('display_name'); ?></li>
+				<li class="written"><?php the_author_posts_link(); ?></li>
 				
 				<li class="comments"><span class="comments"><?php comments_popup_link(__('No comments yet', 'siiimple'), __('1 comment', 'siiimple'), __('% comments', 'siiimple')); ?></span></li>
         			
@@ -151,13 +149,15 @@ get_header();
 			
 				<div class="content-wrap">
 				
-					<?php if ( !$image ) { ?> 
+				<?php if ( !$image ) { ?> 
 				
 				<h2 class="no-image"><span class="date-area"><?php the_time('F jS, Y') ?></span><br/><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				
-					<?php } ?>
+				<?php } ?>
 			
-					<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
+				<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
+				
+				<?php wp_link_pages( $args ); ?>
 			
 				</div>
 			

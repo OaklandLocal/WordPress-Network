@@ -198,6 +198,8 @@
 /* ================================================
 01 :::::: SINGLE GALLERY
 ================================================ */
+
+
 body.single #single.container .flexslider_gallery ol.flex-control-nav.flex-control-paging { 
 	position: absolute;
 	bottom:4px;
@@ -327,7 +329,7 @@ body.single #single.container .flexslider_gallery ol.flex-control-nav.flex-contr
 
 .main_flexslider.loading {
 	min-height: 300px;
-	background-image: url(../images/loader1.gif);
+	background-image: url(../images/360.GIF);
 	background-position:center center;
 	background-repeat: no-repeat ;
 }

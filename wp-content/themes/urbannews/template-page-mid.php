@@ -24,6 +24,7 @@ get_header(); ?>
 		<!-- VIDEO -->
 		<?php $video_page = get_post_meta($post->ID, 'siiimple_video_page', TRUE); ?>
 		
+		
 		<!-- SET VIEWS -->
 		<?php setPostViews(get_the_ID()); ?>
 
@@ -146,9 +147,12 @@ get_header(); ?>
 	
 		<div class="section-inner">
 		
+			<?php $mid_cat_num = get_post_meta($post->ID, 'siiimple_mid_cat_num', TRUE); ?>
+			<?php $mid_cat = get_post_meta($post->ID, 'siiimple_mid_cat', TRUE); ?>
+		
 				<?php 
 				$count=0;
-				$args=array( 'showposts' => $mid_num,'category_name' => $mid_cat );  $my_query = new WP_Query($args);
+				$args=array( 'showposts' => $mid_cat_num,'category_name' => $mid_cat );  $my_query = new WP_Query($args);
 				if ( $my_query->have_posts()  ) { while ($my_query->have_posts()) : $my_query->the_post(); 
 				$count++;
 			

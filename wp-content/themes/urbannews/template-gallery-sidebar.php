@@ -106,17 +106,17 @@ get_header(); ?>
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$currentCategory = get_post_meta($post->ID, 'siiimple_page_cat', TRUE);
 			$galleryNumber = get_post_meta($post->ID, 'siiimple_gallery_number', TRUE);
-			$args=array(
-   			'post_type'=>'post',
-   			'category_name' => $currentCategory,
-			'paged'=> $paged,
-    		'posts_per_page' => $galleryNumber
-			);
-			$temp = $wp_query;
-			$wp_query= null;
-			$wp_query = new WP_Query($args);
-
-			if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); $count++;
+			
+			  if ( get_query_var('paged') ) {
+                        $paged = get_query_var('paged');
+                } elseif ( get_query_var('page') ) {
+                        $paged = get_query_var('page');
+                } else {
+                        $paged = 1;
+                }
+                query_posts( array( 'post_type' => 'post', 'posts_per_page' => $galleryNumber,'cat' => $currentCategory,'paged' => $paged ) );
+                if ( have_posts() ) : $count = 0; while ( have_posts() ) : the_post(); $count++;
+			
 			
 			//resize image
 			$thumb = get_post_thumbnail_id();

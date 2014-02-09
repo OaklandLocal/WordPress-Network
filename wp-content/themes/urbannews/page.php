@@ -96,7 +96,7 @@ get_header(); ?>
 				
 					<li class="posted"><?php the_time('M j, Y') ?></li>
 				
-					<li class="written"><?php the_author_meta('display_name'); ?></li>
+					<li class="written"><?php the_author_link(); ?></li>
 				
 					<li class="comments"><span class="comments"><?php comments_popup_link(__('No comments yet', 'siiimple'), __('1 comment', 'siiimple'), __('% comments', 'siiimple')); ?></span></li>
         			

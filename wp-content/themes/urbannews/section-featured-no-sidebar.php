@@ -26,11 +26,11 @@
 				
 						<img src="<?php echo $image ?>" class="main-img" alt="<?php the_title(); ?>"/>
 						
-						<h2><span class="date-area"><<?php the_time('F jS, Y') ?></span><br/><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<h2><span class="date-area"><?php the_time('F jS, Y') ?></span><br/><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				
 					<?php } else { ?>
 				
-					<h2 class="no-image"><span class="date-area"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .' '. __('ago', 'siiimple'); ?></span><br/><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<h2 class="no-image"><span class="date-area"><?php the_time('F jS, Y') ?></span><br/><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					
 					<?php } ?>
 				

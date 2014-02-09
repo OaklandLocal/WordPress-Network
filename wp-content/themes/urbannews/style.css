@@ -16,12 +16,17 @@ Tags:
 	2.  Fixed issue with enable/disable.
 	3.  Fixed Comment form misalignment.
 	4.  Added Three Header Options
-	5.  re-Organized stylesheet
-	6.  Updated time system on pages
-	7.  Fixed Twitter API
 
 *********/
 
+/*WARNING
+:::::::::::::
+:::::::::::::
+:::::::::::::
+It's okay if you edit this file, but be careful.  Unless you know what you're doing, it's best to edit in the Custom CSS in Theme Options area.  Just a friendly warning.
+:::::::::::::
+::::::::::::: 
+:::::::::::::*/
 
 /* @group GENERAL */
 
@@ -3758,12 +3763,22 @@ h3.active a:link {
 #respond .comment-button {
 	background: #333;
 	text-shadow: none !important;
-	border: none;
+	border: none !important;
 	color: #fff;
 	padding: 16px 18px;
 	-webkit-transition: background-color .15s ease-in-out;
 	-moz-transition: background-color .15s ease-in-out;
 	-o-transition: background-color .15s ease-in-out
+}
+
+#respond input#submit {
+	border: none !important;
+	padding: 20px 25px !important;
+}
+
+#single #respond input#submit:hover {
+	background: #444 !important;
+	cursor: pointer !important;
 }
 
 .comment-button:hover {
@@ -4047,6 +4062,10 @@ h3.active a:hover {
 
 #no-section-one #sections-video a.page-link {
 	left: 25%
+}
+
+.jbww_head_today_forecast_digit p {
+	margin-top: 30px !important;
 }
 
 /* @end */
