@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license **LICENSE**
- * @version 1.3.4
+ * @version 1.5
  */
 
 include OXY_THEME_DIR . 'inc/modules/css-minify/minify-css.php';

@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license http://wiki.envato.com/support/legal-terms/licensing-terms/
- * @version 1.3.4
+ * @version 1.5
  */
 
 /**
@@ -18,30 +18,50 @@
  **/
 function oxy_shortcode_section($atts , $content = '') {
     extract( shortcode_atts( array(
-        'id'          => '',
-        'swatch'      => 'swatch-white',
-        'title'       => '',
-        'class'       => '',
-        'description' => '',
-        'disable'     => 'off',
-        'padding'     => 'padded',
-        'width'       => 'no-fullwidth',
-        'header_size' => 'h2',
-        'background'  => '',
-        'opacity'     => 0.2,
-        'size'        => 'cover',
-        'repeat'      => 'no-repeat',
+        'id'                => '',
+        'swatch'            => 'swatch-white',
+        'title'             => '',
+        'class'             => '',
+        'description'       => '',
+        'disable'           => 'off',
+        'padding'           => 'padded',
+        'width'             => 'no-fullwidth',
+        'header_size'       => 'h2',
+        'background'        => '',
+        'background_video'  => '',
+        'opacity'           => 0.2,
+        'size'              => 'cover',
+        'repeat'            => 'no-repeat',
+        'parallax'          => 'scroll'
     ), $atts ) );
 
+    global $oxy_is_iphone, $oxy_is_ipad, $oxy_is_android;
     $slim = $padding == 'padded'? '':'section-slim';
     $container = $width == 'fullwidth'? 'container-fluid':'container';
-    $section_background = $background != '' ? ' data-background-image="'.$background.'" data-background-attachment="scroll" data-background-opacity="'.$opacity.'" data-background-repeat="'.$repeat.'" data-background-size="'.$size.'"':'';
+    $section_background = "";
+    if( $background != '' ){
+        $section_background .= '<div class="section-background" style="';
+        $section_background .= "background-image:url('".$background."');";
+        $section_background .= 'background-attachment:'.$parallax.';opacity:'.$opacity.';background-repeat:'.$repeat.';background-size:'.$size.';"></div>';
+    }
+    if( $background_video != '' ) {
+        if( !$oxy_is_iphone && !$oxy_is_ipad  && !$oxy_is_android || oxy_get_option( 'mobile_videos' ) === 'on' ) {
+            if( is_numeric( $background_video ) ) {
+                 $background_video = wp_get_attachment_url( $background_video );
+             }
+            $section_background .= '<div class="section-background" style="';
+            $section_background .= 'opacity:' . $opacity . ';">';
+            $section_background .= '<video src="' . $background_video . '" width="100%" height="100%" loop autoplay></video></div>';
+        }
+    }
+
+    $section_background .= $background_video != '' ? '':'' ;
     $section_id = $id === '' ? '' : ' id="' . $id . '"';
     $section_title = ( $title != '' || $description != '' ) ? '<div class="section-header">' : '';
     $section_title .= $title != ''? '<'.$header_size.' class="headline">' . $title . '</'.$header_size.'>' :'';
     $section_title .= $description != ''? '<p>'.$description.'</p>' :'';
     $section_title .= ( $title != '' || $description != '' ) ? '</div>' : '';
-    return $disable == 'off'? '<section class="section '. $slim.' ' . $swatch . ' ' . $class . '"'.$section_background.$section_id.'><div class="'.$container.'">' . $section_title . do_shortcode( $content ) . '</div></section>': do_shortcode( $content );
+    return $disable == 'off'? '<section class="section '. $slim.' ' . $swatch . ' ' . $class . '"'.$section_id.'>'.$section_background.'<div class="'.$container.'">' . $section_title . do_shortcode( $content ) . '</div></section>': do_shortcode( $content );
 }
 add_shortcode( 'section', 'oxy_shortcode_section' );
 
@@ -87,8 +107,11 @@ function oxy_shortcode_services( $atts, $content = '') {
     $output = '';
     if( count( $services > 0 ) ) {
         $output .= '<ul class="unstyled row-fluid">';
-        $services_per_row = ( $columns == 3 )? 3:4;
-        $span = ( $columns == 4 )?'span3':'span4';
+
+        $services_per_row = $columns;
+        $columns = intval($columns);
+        $span = $columns > 0 ? floor( 12 / $columns ) : 12;
+
         $service_num = 1;
         foreach( $services as $post ) {
             setup_postdata($post);
@@ -100,8 +123,9 @@ function oxy_shortcode_services( $atts, $content = '') {
             $image_type     = get_post_meta( $post->ID, THEME_SHORT. '_image_type', true );
             $link           = oxy_get_slide_link( $post );
             $link_target    = get_post_meta( $post->ID, THEME_SHORT. '_link_target', true );
+            // fallback for earlier versions
             if( $link == '' ) {
-                $link = get_permalink();
+                $link = esc_url(get_permalink());
             }
             $image_ref      = $link_image == 'on' ? 'href="'.$link.'"':'';
             $title_ref      = $link_title == 'on' ? 'href="'.$link.'"':'';
@@ -111,7 +135,7 @@ function oxy_shortcode_services( $atts, $content = '') {
                 $service_num = 1;
             }
 
-            $output .= '<li class="'.$span.'">';
+            $output .= '<li class="span'.$span.'">';
             $output .= '<div class="'.$image_shape.' '.$image_size.'"><div class="box-dummy"></div>';
             $output .= '<a '.$image_ref.' class="box-inner '.$service_swatch.'" target="'.$link_target.'">';
             // conditionally render images-icons here
@@ -376,7 +400,7 @@ function oxy_shortcode_staff_list($atts , $content = '' ) {
             $moto_text      = (isset($custom_fields[THEME_SHORT . '_moto_text']))? $custom_fields[THEME_SHORT . '_moto_text'][0]:'';
             $link           = oxy_get_slide_link( $post );
             if( $link == '' ) {
-                $link = get_permalink();
+                $link = esc_url(get_permalink());
             }
             $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'circle-image' );
 
@@ -567,7 +591,7 @@ function oxy_portfolio_filters( $filters, $selected_portfolios ) {
 
     $output = '<ul class="isotope-filters small-screen-center">';
     // add all link
-    $output .= '<li class="active"><a class="pseudo-border active" data-filter="*" href="#">all</a></li>';
+    $output .= '<li class="active"><a class="pseudo-border active" data-filter="*" href="#">' . __('all', 'swatch-td' ) . '</a></li>';
     foreach( $filters as $filter ) {
         $output .= '<li><a class="pseudo-border" data-filter=".filter-' . $filter->slug . '" href="#">' . $filter->name . '</a></li>';
     }
@@ -584,8 +608,8 @@ function oxy_portfolio_item( $item, $filters, $columns ) {
     //$item_link = get_permalink( $post->ID );
     setup_postdata($post);
     $item_link = oxy_get_slide_link( $post );
-    if( $item_link == '' ) {
-        $item_link = get_permalink();
+    if( $item_link === '' ) {
+        $item_link = esc_url(get_permalink());
     }
 
     $item_data = oxy_get_portfolio_item_data( $item );
@@ -604,16 +628,22 @@ function oxy_portfolio_item( $item, $filters, $columns ) {
     $output .= get_the_post_thumbnail( $post->ID, 'portfolio-thumb', array( 'alt' => $item_data->title ) );
     $output .= '<figcaption class="'. get_post_meta( $item->ID, THEME_SHORT. '_swatch', true ) .'">';
     $output .= '<h4>';
-    $output .= '<a href="' . $item_link . '">' . $item_data->title . '</a>';
+    if($item_link !== null){
+        $output .= '<a href="' . $item_link . '">';
+    }
+    $output .= $item_data->title;
+    if($item_link !== null){
+        $output .= '</a>';
+    }
     $output .= '</h4>';
     $output .=  strip_shortcodes( get_the_content('', true) );
     $output .= '<div class="more overlay">';
     $output .= '<a class="' . $item_data->popup_class . ' pull-left" href="' . $item_data->popup_link . '" title="' . $item_data->title . '" '.$gallery_images.'>';
     $output .= '<i class="' . $item_data->icon . '"></i>';
     $output .= '</a>';
-    $output .= '<a class="pull-right" href="' . $item_link . '">';
-    $output .= '<i class="icon-link"></i>';
-    $output .= '</a>';
+    if($item_link !== null){
+        $output .= '<a class="pull-right" href="' . $item_link . '"><i class="icon-link"></i></a>';
+    }
     $output .= '</div>';
     $output .= '</figcaption>';
     $output .= '</figure>';
@@ -959,6 +989,7 @@ function oxy_shortcode_slideshow($atts , $content = '' ){
         'type'               => 'revolution',
         'revolution'         => '',
         'flexslider'         => '',
+        'layerslider'        => '',
         'animation'          => 'slide',
         'speed'              => 7000,
         'duration'           => 600,
@@ -979,7 +1010,11 @@ function oxy_shortcode_slideshow($atts , $content = '' ){
     $output = "";
     if( $params['type'] == 'revolution'){
 
-        $output .= ( $params['revolution']== "" )? '' : '[rev_slider '.$params['revolution'].']';
+        $output .= ( $params['revolution'] == "" )? '' : '[rev_slider '.$params['revolution'].']';
+    }
+    else if( $params['type'] == 'layerslider'){
+
+        $output .= ( $params['layerslider'] == "" )? '' : '[layerslider id='.$params['layerslider'].']';
     }
     else{
         $output .= oxy_create_flexslider($params['flexslider'], $params , false);

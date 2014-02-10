@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license http://wiki.envato.com/support/legal-terms/licensing-terms/
- * @version 1.3.4
+ * @version 1.5
  */
 
 
@@ -23,8 +23,15 @@ return array(
             'desc'    => __('Add a background to the section', 'swatch-admin-td'),
         ),
         array(
+            'name'    => __('Background Video', 'swatch-admin-td'),
+            'id'      => 'background_video',
+            'type'    => 'text',
+            'default' => '',
+            'desc'    => __('Enter url of a video to use for this section background.', 'swatch-admin-td'),
+        ),
+        array(
             'name'      => __('Opacity', 'swatch-admin-td'),
-            'desc'      => __('Set the opacity of the image', 'swatch-admin-td'),
+            'desc'      => __('Set the opacity of the image and video backgrounds', 'swatch-admin-td'),
             'id'        => 'opacity',
             'type'      => 'slider',
             'default'   => 0.2,
@@ -58,5 +65,16 @@ return array(
             ),
             'desc'    => __('Set if/how the image will be repeated', 'swatch-admin-td'),
         ),
+        array(
+        'name'    => __('Image Background Parallax', 'swatch-admin-td'),
+        'id'      => 'parallax',
+        'type'    => 'select',
+        'default' => 'scroll',
+        'options' => array(
+            'scroll' => __('Scroll', 'swatch-admin-td'),
+            'fixed'  => __('Fixed', 'swatch-admin-td'),
+        ),
+        'desc'    => __('Set the way the background scrolls with the page. Scroll = normal Fixed = Parallax effect.', 'swatch-admin-td'),
+    ),
     ),
 );

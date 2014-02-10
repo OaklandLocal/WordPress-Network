@@ -12,6 +12,7 @@
         var $selectContainer     = $slideshowType.closest('.option');
         var $captionsContainer   = $('[name="accordion-header-Captions"]');
         var $revolutionContainer = $('[name="accordion-content-Slideshow"]').find('#revolution').closest('.option');
+        var $layerSliderContainer= $('[name="accordion-content-Slideshow"]').find('#layerslider').closest('.option');
 
         $slideshowType.change(function(){
             // hide all controls after the select
@@ -23,13 +24,20 @@
                 case 'revolution':
                     $selectContainer.nextAll().hide();
                     $revolutionContainer.show();
+                    $layerSliderContainer.hide();
                     $captionsContainer.hide();
                 break;
                 case 'flexslider':
                     $selectContainer.nextAll().show();
                     $revolutionContainer.hide();
+                    $layerSliderContainer.hide();
                     $captionsContainer.show();
                 break;
+                case 'layerslider':
+                    $selectContainer.nextAll().hide();
+                    $revolutionContainer.hide();
+                    $captionsContainer.hide();
+                    $layerSliderContainer.show();
             }
         }).trigger('change');
     });

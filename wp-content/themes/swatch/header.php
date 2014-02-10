@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license http://wiki.envato.com/support/legal-terms/licensing-terms/
- * @version 1.3.4
+ * @version 1.5
  */
 ?><!DOCTYPE html>
 <!--[if IE 8 ]> <html <?php language_attributes(); ?> class="ie8"> <![endif]-->

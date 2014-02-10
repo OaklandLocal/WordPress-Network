@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license http://wiki.envato.com/support/legal-terms/licensing-terms/
- * @version 1.3.4
+ * @version 1.5
  */
 
 if ( have_posts() ):
@@ -60,13 +60,13 @@ if ( have_posts() ):
             <h1 class="headline">
                <?php the_title(); ?>
             </h1>
-            <?php if( get_previous_post() ) : ?>
-            <a class="prev-portfolio-item" data-original-title="Previous" data-toggle="tooltip" href="<?php echo get_permalink(get_adjacent_post(false, '', true)); ?>">
+            <?php if( get_previous_post(true, '', 'oxy_portfolio_categories') ) : ?>
+            <a class="prev-portfolio-item" data-original-title="<?php echo __('Previous', 'swatch-td' ); ?>" data-toggle="tooltip" href="<?php echo get_permalink(get_previous_post(true, '', 'oxy_portfolio_categories')); ?>">
                 <i class="icon-angle-left"></i>
             </a>
             <?php endif; ?>
-            <?php if( get_next_post() ) : ?>
-            <a class="next-portfolio-item" data-original-title="Next" data-toggle="tooltip" href="<?php echo get_permalink(get_adjacent_post(false, '', false)); ?>">
+            <?php if( get_next_post(true, '', 'oxy_portfolio_categories') ) : ?>
+            <a class="next-portfolio-item" data-original-title="<?php echo __('Next', 'swatch-td' ); ?>" data-toggle="tooltip" href="<?php echo get_permalink(get_next_post(true, '', 'oxy_portfolio_categories')); ?>">
                 <i class="icon-angle-right"></i>
             </a>
             <?php endif; ?>

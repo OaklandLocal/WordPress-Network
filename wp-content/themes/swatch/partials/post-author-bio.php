@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license **LICENSE**
- * @version 1.3.4
+ * @version 1.5
  */
 $author_id = get_the_author_meta('ID'); ?>
 <div class="author-info media small-screen-center <?php echo oxy_get_option('author_bio_swatch'); ?>">

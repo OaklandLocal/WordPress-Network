@@ -30,9 +30,6 @@ var animationSpeed = 400;
         // Init magnific popup
         lightboxInit();
 
-        // Init social icons
-        iconHovers();
-
         // Init bootstrap's carusel
         carouselInit();
 
@@ -45,6 +42,9 @@ var animationSpeed = 400;
         // Init Audio player
         audioInit();
 
+        // Init Video Player
+        videoInit();
+
         // Accordion toggles
         accordionInit();
 
@@ -56,9 +56,6 @@ var animationSpeed = 400;
 
         // Scroll around sections
         smoothScroll();
-
-        // Section backgrounds
-        sectionBackgrounds();
 
         // fix for embeded youtube videos shortcode index
         fixEmbededVideosIndex();
@@ -314,11 +311,12 @@ function lightboxInit() {
     $('.magnific-gallery').each(function(index , value){
         var gallery = $(this);
         var galleryImages = $(this).data("links").split(",");
+        var galleryTitle = $(this).attr("title");
         var items = [];
         for(var i=0;i<galleryImages.length; i++){
             items.push({
                 src:galleryImages[i],
-                title:""
+                title:galleryTitle
             });
         }
         gallery.magnificPopup({
@@ -359,8 +357,9 @@ function isotopeInit() {
       $container.isotope({ filter: selector });
       return false;
     });
+    // rearrange items on resize
     $(window).smartresize(function(){
-      $container.isotope();
+      $container.isotope('reLayout');
     });
 
 }
@@ -407,7 +406,7 @@ function filtersInit() {
 
 // Function to init bootstrap's tooltip
 function tooltipInit() {
-    $('[data-toggle]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
 }
 
 // Function to init bootstrap's carousel
@@ -497,6 +496,12 @@ function audioInit() {
     $( 'audio' ).audioPlayer();
 }
 
+function videoInit() {
+    $('video').mediaelementplayer({
+        pauseOtherPlayers: false
+    });
+}
+
 // Function to fix accordion arrows
 function accordionInit() {
     $('.accordion-body').on('hide', function () {
@@ -563,27 +568,6 @@ function smoothScroll() {
             } );
         }
    });
-}
-
-// Set section background images
-function sectionBackgrounds() {
-    $('[data-background-image]').each(function(){
-        var element         = $(this).prepend("<div class='section-background'>"),
-            bgImage         = 'url(' + element.attr('data-background-image') + ')',
-            bgOpacity       = element.attr('data-background-opacity'),
-            bgRepeat        = element.attr('data-background-repeat'),
-            bgSize          = element.attr('data-background-size'),
-            bgAttachment    = element.attr('data-background-attachment'),
-            sectionBg       = element.find('.section-background');
-
-        sectionBg.css({
-            "background-image" : bgImage,
-            "opacity" : bgOpacity,
-            "background-repeat" : bgRepeat,
-            "background-size" : bgSize,
-            "background-attachment" : bgAttachment
-        });
-    });
 }
 
 function fixEmbededVideosIndex() {

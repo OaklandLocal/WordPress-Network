@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license **LICENSE**
- * @version 1.3.4
+ * @version 1.5
  */
 
 global $oxy_theme;
@@ -1060,6 +1060,23 @@ if( isset($oxy_theme) ) {
                     ),
                 )
             ),
+            'mobile-section' => array(
+                'title'   => __('Mobile', 'swatch-admin-td'),
+                'header'  => __('Here you can configure settings targeted at mobile devices', 'swatch-admin-td'),
+                'fields' => array(
+                    array(
+                        'name'    => __('Background Videos', 'swatch-admin-td'),
+                        'desc'    => __('Here you can enable section background videos for mobile. By default it is set to off in order to save bandwidth. Section background image will be displayed as a fallback', 'swatch-admin-td'),
+                        'id'      => 'mobile_videos',
+                        'type'    => 'radio',
+                        'options' => array(
+                            'on'  => __('On', 'swatch-admin-td'),
+                            'off' => __('Off', 'swatch-admin-td'),
+                        ),
+                        'default' => 'off',
+                    ),
+                )
+            ),
             'google-anal-section' => array(
                 'title'   => __('Google Analytics', 'swatch-admin-td'),
                 'header'  => __('Set your Google Analytics Tracker and keep track of visitors to your site.', 'swatch-admin-td'),
@@ -1097,90 +1114,7 @@ $oxy_theme->register_option_page( array(
                         'hide' => __('Hide', 'swatch-admin-td'),
                     ),
                     'default' => 'show',
-                ),
-                array(
-                    'name'    => __('Show Send Button', 'swatch-admin-td'),
-                    'desc'    => __('Choose a layout for your like button.', 'swatch-admin-td'),
-                    'id'      => 'fb_show_send',
-                    'type'    => 'radio',
-                    'options' => array(
-                        'true'  => __('Show', 'swatch-admin-td'),
-                        'false' => __('Hide', 'swatch-admin-td'),
-                    ),
-                    'default' => 'false',
-                ),
-                array(
-                    'name'    => __('Layout', 'swatch-admin-td'),
-                    'desc'    => __('Include a Send button with the Like button.', 'swatch-admin-td'),
-                    'id'      => 'fb_layout',
-                    'type'    => 'select',
-                    'options' => array(
-                        'standard'     => __('Standard', 'swatch-admin-td'),
-                        'button_count' => __('Button Count', 'swatch-admin-td'),
-                        'box_count'    => __('Box Count', 'swatch-admin-td')
-                    ),
-                    'default' => 'button_count',
-                ),
-                array(
-                    'name'    => __('Show Faces', 'swatch-admin-td'),
-                    'desc'    => __('Display profile photos below the button (standard layout only)', 'swatch-admin-td'),
-                    'id'      => 'fb_show_faces',
-                    'type'    => 'radio',
-                    'options' => array(
-                        'true'  => __('Show', 'swatch-admin-td'),
-                        'false' => __('Hide', 'swatch-admin-td'),
-                    ),
-                    'default' => 'false',
-                ),
-                array(
-                    'name'      => __('Width', 'swatch-admin-td'),
-                    'desc'      => __('Width of the Like button.', 'swatch-admin-td'),
-                    'id'        => 'fb_width',
-                    'type'      => 'slider',
-                    'default'   => 50,
-                    'attr'      => array(
-                        'max'       => 450,
-                        'min'       => 50,
-                        'step'      => 1
-                    )
-                ),
-                array(
-                    'name'    => __('Button Text', 'swatch-admin-td'),
-                    'desc'    => __('Verb to display on the button', 'swatch-admin-td'),
-                    'id'      => 'fb_action',
-                    'type'    => 'radio',
-                    'options' => array(
-                        'like'  => __('Like', 'swatch-admin-td'),
-                        'recommend' => __('Recommend', 'swatch-admin-td'),
-                    ),
-                    'default' => 'like',
-                ),
-                array(
-                    'name'    => __('Button Font', 'swatch-admin-td'),
-                    'desc'    => __('Font to display in the button', 'swatch-admin-td'),
-                    'id'      => 'fb_font',
-                    'type'    => 'select',
-                    'options' => array(
-                        'arial'         => __('Arial', 'swatch-admin-td'),
-                        'lucida grande' => __('Lucida Grande', 'swatch-admin-td'),
-                        'segoe ui'      => __('Segoe ui', 'swatch-admin-td'),
-                        'tahoma'        => __('Tahoma', 'swatch-admin-td'),
-                        'trebuchet ms'  => __('Trebuchet ms', 'swatch-admin-td'),
-                        'verdana'       => __('Verdana', 'swatch-admin-td'),
-                    ),
-                    'default' => 'verdana',
-                ),
-                array(
-                    'name'    => __('Button Colour', 'swatch-admin-td'),
-                    'desc'    => __('Color scheme for the like button.', 'swatch-admin-td'),
-                    'id'      => 'fb_colour',
-                    'type'    => 'radio',
-                    'options' => array(
-                        'light'  => __('Light', 'swatch-admin-td'),
-                        'dark' => __('Dark', 'swatch-admin-td'),
-                    ),
-                    'default' => 'light',
-                ),
+                ),                
             )
         ),
         'twitter-section' => array(
@@ -1197,44 +1131,7 @@ $oxy_theme->register_option_page( array(
                         'hide' => __('Hide', 'swatch-admin-td'),
                     ),
                     'default' => 'show',
-                ),
-                array(
-                    'name'    => __('Tweet Text', 'swatch-admin-td'),
-                    'desc'    => __('Default Tweet text. Leave blank to use page title.', 'swatch-admin-td'),
-                    'id'      => 'twitter_text',
-                    'type'    => 'text',
-                    'default' => __('Check out this great post', 'swatch-admin-td')
-                ),
-                array(
-                    'name'    => __('Tweet Hashtags', 'swatch-admin-td'),
-                    'desc'    => __('Hashtags to include in tweet. (comma separated without the # symbol)', 'swatch-admin-td'),
-                    'id'      => 'twitter_hashtags',
-                    'type'    => 'text',
-                    'default' => ''
-                ),
-                array(
-                    'name'    => __('Count Box Position', 'swatch-admin-td'),
-                    'desc'    => __('Choose where to show the tweet count box', 'swatch-admin-td'),
-                    'id'      => 'twitter_count_box',
-                    'type'    => 'radio',
-                    'options' => array(
-                        'none'       => __('No Count Box', 'swatch-admin-td'),
-                        'horizontal' => __('Horizontal', 'swatch-admin-td'),
-                        'vertical'   => __('Vertical', 'swatch-admin-td')
-                    ),
-                    'default' => 'horizontal'
-                ),
-                array(
-                    'name'    => __('Button Size', 'swatch-admin-td'),
-                    'desc'    => __('Choose a size for your tweet button', 'swatch-admin-td'),
-                    'id'      => 'twitter_size',
-                    'type'    => 'radio',
-                    'options' => array(
-                        'medium'       => __('Medium', 'swatch-admin-td'),
-                        'large' => __('Large', 'swatch-admin-td')
-                    ),
-                    'default' => 'medium'
-                ),
+                ),                
             )
         ),
         'google-section' => array(
@@ -1251,45 +1148,24 @@ $oxy_theme->register_option_page( array(
                         'hide' => __('Hide', 'swatch-admin-td'),
                     ),
                     'default' => 'show',
-                ),
+                ),                
+            )
+        ),
+        'pinterest-section' => array(
+            'title'   => __('Pinterest', 'swatch-admin-td'),
+            'header'  => __('Set the style of your pinterest button', 'swatch-admin-td'),
+            'fields' => array(
                 array(
-                    'name'    => __('Button Size', 'swatch-admin-td'),
-                    'desc'    => __('Size of google plus button', 'swatch-admin-td'),
-                    'id'      => 'google_size',
-                    'type'    => 'select',
-                    'options' => array(
-                        'small'    => __('Small', 'swatch-admin-td'),
-                        'medium'   => __('Medium', 'swatch-admin-td'),
-                        'standard' => __('Standard', 'swatch-admin-td'),
-                        'tall'     => __('Tall', 'swatch-admin-td'),
-                    ),
-                    'default' => 'medium',
-                ),
-                array(
-                    'name'    => __('Button Bubble', 'swatch-admin-td'),
-                    'desc'    => __('Sets the annotation to display next to the button.', 'swatch-admin-td'),
-                    'id'      => 'google_annotation',
+                    'name'    => __('Show Pinterest Button', 'swatch-admin-td'),
+                    'desc'    => __('Show Pinterest button on your single blog pages', 'swatch-admin-td'),
+                    'id'      => 'pinterest_show',
                     'type'    => 'radio',
                     'options' => array(
-                        'none' => __('None', 'swatch-admin-td'),
-                        'bubble' => __('Bubble', 'swatch-admin-td'),
-                        'inline' => __('Inline', 'swatch-admin-td'),
+                        'show' => __('Show', 'swatch-admin-td'),
+                        'hide' => __('Hide', 'swatch-admin-td'),
                     ),
-                    'default' => 'bubble',
-                ),
-                array(
-                    'name'    => __('Expand To', 'swatch-admin-td'),
-                    'desc'    => __('Sets the preferred positions to display hover and confirmation bubbles', 'swatch-admin-td'),
-                    'id'      => 'google_expand_to',
-                    'type'    => 'select',
-                    'options' => array(
-                        'top'    => __('Top', 'swatch-admin-td'),
-                        'right'  => __('Right', 'swatch-admin-td'),
-                        'bottom' => __('Bottom', 'swatch-admin-td'),
-                        'left'   => __('Left', 'swatch-admin-td')
-                    ),
-                    'default' => 'bottom',
-                ),
+                    'default' => 'show',
+                ),                
             )
         )
     )

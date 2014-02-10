@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license http://wiki.envato.com/support/legal-terms/licensing-terms/
- * @version 1.3.4
+ * @version 1.5
  */
 
 /******************************
@@ -25,6 +25,14 @@ function create_image_sizes() {
 }
 add_action( 'init', 'create_image_sizes');
 
+function oxy_detect_user_agent() {
+    global $oxy_is_iphone, $oxy_is_ipad, $oxy_is_android;
+    $oxy_is_iphone  = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+    $oxy_is_ipad    = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+    $oxy_is_android = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
+}
+
+add_action( 'init', 'oxy_detect_user_agent');
 
 /******************************
  *
@@ -131,15 +139,17 @@ function oxy_load_scripts() {
     wp_enqueue_script( 'isotope', OXY_THEME_URI. 'javascripts/jquery.isotope.min.js', array('jquery'), '1.5.25', true );
     wp_enqueue_script( 'waypoints', OXY_THEME_URI. 'javascripts/waypoints.min.js', array('jquery'), '2.02', true );
     wp_enqueue_script( 'piecharts', OXY_THEME_URI. 'javascripts/jquery.easy-pie-chart.js', array('jquery'), '1.6.3', true );
+    wp_enqueue_script( 'mediaElement', OXY_THEME_URI. 'javascripts/mediaelement-and-player.min.js', array('jquery'), '2.13.1', true );
+
 
 
     global $is_IE;
     if( $is_IE ) {
-        //wp_enqueue_script( 'imagesloaded', OXY_THEME_URI. 'javascripts/imagesloaded.pkgd.min.js', array('jquery','isotope'), '3.0.4', true );
-        wp_enqueue_script( 'IE', OXY_THEME_URI. 'javascripts/IE.js', array('jquery'), '1.0', true );
+        wp_enqueue_script( 'placeholder', OXY_THEME_URI. 'javascripts/jquery.placeholder.min.js', array('jquery'), '2.0.7', true );
+        wp_enqueue_script( 'IE', OXY_THEME_URI. 'javascripts/IE.js', array('jquery', 'placeholder'), '1.0', true );
     }
 
-    wp_enqueue_script( 'script', OXY_THEME_URI . 'javascripts/script.js', array( 'jquery', 'bootstrap', 'magnific', 'flexslider', 'audioplayer', 'isotope', 'waypoints', 'piecharts','imagesloaded' ), '1.0', true );
+    wp_enqueue_script( 'script', OXY_THEME_URI . 'javascripts/script.js', array( 'jquery', 'bootstrap', 'magnific', 'flexslider', 'audioplayer', 'isotope', 'waypoints', 'piecharts', 'imagesloaded', 'mediaElement' ), '1.0', true );
 
        // add hover dropdown menus
     if( oxy_get_option( 'menu' ) == 'hover' ) {
@@ -179,14 +189,14 @@ function oxy_load_scripts() {
     wp_enqueue_style( 'bootstrap', OXY_THEME_URI . 'stylesheets/bootstrap/bootstrap.css', array(), false, 'all' );
     wp_enqueue_style( 'responsive', OXY_THEME_URI . 'stylesheets/bootstrap/responsive.css', array( 'bootstrap' ), false, 'all' );
     wp_enqueue_style( 'font-awesome', OXY_THEME_URI . 'stylesheets/font-awesome/font-awesome.css', array( 'bootstrap' ), false, 'all' );
-    wp_enqueue_style( 'style', OXY_THEME_URI . 'stylesheets/main.css', array( 'bootstrap' ), false, 'all' );
+    wp_enqueue_style( 'style', OXY_THEME_URI . 'stylesheets/main.css', array( 'responsive' ), false, 'all' );
     wp_enqueue_style( 'color-swatches', OXY_THEME_URI . 'stylesheets/color-swatches.css', array( 'style' ), false, 'all' );
     // wp_enqueue_style( 'fonts', OXY_THEME_URI . 'stylesheets/fonts.css', array( 'style' ), false, 'all' );
     wp_enqueue_style( 'animate', OXY_THEME_URI . 'stylesheets/animations.css', array( 'bootstrap' ), false, 'all' );
 
 
     // check if woo commerce is active
-    if( is_woocommerce_active() ) {
+    if( oxy_is_woocommerce_active() ) {
         // woocommerce only CSS
         wp_enqueue_style( 'swatch-woocommerce', OXY_THEME_URI . 'stylesheets/woocommerce.css', array( 'woocommerce_frontend_styles' ), false, 'all' );
         // woocommerce only JS
@@ -610,26 +620,30 @@ function oxy_get_slide_link( $post ) {
     switch( $link_type ) {
         case 'page':
             $id = get_post_meta( $post->ID, THEME_SHORT . '_page_link', true );
-            return get_permalink( $id );
+            return esc_url(get_permalink( $id ));
         break;
         case 'post':
             $id = get_post_meta( $post->ID, THEME_SHORT . '_post_link', true );
-            return get_permalink( $id );
+            return esc_url(get_permalink( $id ));
         break;
         case 'category':
             $slug = get_post_meta( $post->ID, THEME_SHORT . '_category_link', true );
             $cat = get_category_by_slug( $slug );
-            return get_category_link( $cat->term_id );
+            return esc_url(get_category_link( $cat->term_id ));
         break;
         case 'portfolio':
             $id = get_post_meta( $post->ID, THEME_SHORT . '_portfolio_link', true );
-            return get_permalink( $id );
+            return esc_url(get_permalink( $id ));
         break;
         case 'url':
-            return get_post_meta( $post->ID, THEME_SHORT . '_url_link', true );
+            return esc_url(get_post_meta( $post->ID, THEME_SHORT . '_url_link', true ));
         break;
         case 'none':
-            return '';
+            return null;
+        break;
+        case 'default':
+        default:
+            return esc_url(get_permalink( $post ));
         break;
     }
 }
@@ -1286,12 +1300,25 @@ function oxy_filter_body_class( $classes ) {
             $classes[] = 'no-header';
         }
     }
+
+    // add classes for mobile agents
+    global $oxy_is_iphone, $oxy_is_android, $oxy_is_ipad;
+    if($oxy_is_iphone){
+        $classes[] = 'oxy-agent-iphone';
+    }
+    else if($oxy_is_ipad){
+        $classes[] = 'oxy-agent-ipad';
+    }
+    else if($oxy_is_android){
+        $classes[] = 'oxy-agent-android';
+    }
+
     return $classes;
 }
 add_filter( 'body_class', 'oxy_filter_body_class');
 
 
-function is_woocommerce_active() {
+function oxy_is_woocommerce_active() {
     // check if woo commerce is active
     return in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) );
 }

@@ -1,4 +1,8 @@
 (function($) {
+    $(document).ready(function() {
+        // fix placeholders
+        $('.ie8, .ie9').find('input, textarea').placeholder();
+    });
     $(window).load(function() {
         // selector for ie rounded images fallback
         if (window.PIE) {

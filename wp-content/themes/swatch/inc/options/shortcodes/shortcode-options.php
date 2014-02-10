@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license **LICENSE**
- * @version 1.3.4
+ * @version 1.5
  */
 
 return array(
@@ -60,6 +60,7 @@ return array(
                         'id'      => 'columns',
                         'type'    => 'radio',
                         'options' => array(
+                            2 => __('Two columns', 'swatch-admin-td'),
                             3 => __('Three columns', 'swatch-admin-td'),
                             4 => __('Four columns', 'swatch-admin-td'),
                         ),
@@ -708,19 +709,28 @@ return array(
                         'options' => array(
                             'revolution' => __('Revolution Slider', 'swatch-admin-td'),
                             'flexslider' => __('Flexslider', 'swatch-admin-td'),
+                            'layerslider'=> __('LayerSLider', 'swatch-admin-td')
                         ),
                     ),
                     array(
                         'name'    => __('Choose a Revolution Slider', 'swatch-admin-td'),
-                        'desc'    => __('Populate your slider with one of the slideshows you created', 'swatch-admin-td'),
+                        'desc'    => __('Populate your slider with one of the Revolution Sliders you created', 'swatch-admin-td'),
                         'id'      => 'revolution',
                         'default' =>  '',
                         'type'    => 'select',
                         'options' => 'revolution',
                     ),
                     array(
+                        'name'    => __('Choose a Layerslider', 'swatch-admin-td'),
+                        'desc'    => __('Populate your slider with one of the LayerSliders you created', 'swatch-admin-td'),
+                        'id'      => 'layerslider',
+                        'default' =>  '',
+                        'type'    => 'select',
+                        'options' => 'layerslider',
+                    ),
+                    array(
                         'name'    => __('Choose a Flexslider', 'swatch-admin-td'),
-                        'desc'    => __('Populate your slider with one of the slideshows you created', 'swatch-admin-td'),
+                        'desc'    => __('Populate your slider with one of the Flexsliders you created', 'swatch-admin-td'),
                         'id'      => 'flexslider',
                         'default' =>  '',
                         'type'    => 'select',

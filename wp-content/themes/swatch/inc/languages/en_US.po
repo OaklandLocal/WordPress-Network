@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Swatch Frontend Translation File 1.3.4\n"
+"Project-Id-Version: Swatch Frontend Translation File 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-04 09:03+0200\n"
+"POT-Creation-Date: 2014-01-20 15:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,9 +81,9 @@ msgid "Slideshows"
 msgstr ""
 
 #: build/inc/custom-posts.php:44 build/inc/option-pages.php:503
-#: build/inc/options/shortcodes/shortcode-options.php:684
-#: build/inc/options/shortcodes/shortcode-options.php:689
-#: build/inc/theme-metaboxes.php:545
+#: build/inc/options/shortcodes/shortcode-options.php:685
+#: build/inc/options/shortcodes/shortcode-options.php:690
+#: build/inc/theme-metaboxes.php:554
 msgid "Slideshow"
 msgstr ""
 
@@ -116,8 +116,8 @@ msgid "Image Title"
 msgstr ""
 
 #: build/inc/custom-posts.php:101 build/inc/option-pages.php:45
-#: build/inc/options/shortcodes/shortcode-options.php:906
-#: build/inc/options/shortcodes/shortcode-options.php:911
+#: build/inc/options/shortcodes/shortcode-options.php:916
+#: build/inc/options/shortcodes/shortcode-options.php:921
 msgid "Image"
 msgstr ""
 
@@ -173,7 +173,7 @@ msgid "Categories"
 msgstr ""
 
 #: build/inc/custom-posts.php:154 build/inc/custom-posts.php:335
-#: build/inc/theme-metaboxes.php:209
+#: build/inc/theme-metaboxes.php:206
 msgid "Category"
 msgstr ""
 
@@ -239,8 +239,8 @@ msgid "No Testimonial found in Trash"
 msgstr ""
 
 #: build/inc/custom-posts.php:188
-#: build/inc/options/shortcodes/shortcode-options.php:135
-#: build/inc/options/shortcodes/shortcode-options.php:140
+#: build/inc/options/shortcodes/shortcode-options.php:136
+#: build/inc/options/shortcodes/shortcode-options.php:141
 msgid "Testimonials"
 msgstr ""
 
@@ -278,7 +278,7 @@ msgstr ""
 
 #: build/inc/custom-posts.php:233 build/inc/custom-posts.php:234
 #: build/inc/custom-posts.php:244
-#: build/inc/options/shortcodes/shortcode-options.php:998
+#: build/inc/options/shortcodes/shortcode-options.php:1008
 #: build/inc/quick-uploaders.php:49
 msgid "Staff"
 msgstr ""
@@ -414,10 +414,10 @@ msgstr ""
 
 #: build/inc/custom-posts.php:381 build/inc/option-pages.php:848
 #: build/inc/option-pages.php:895
-#: build/inc/options/shortcodes/shortcode-options.php:961
-#: build/inc/theme-metaboxes.php:35 build/inc/theme-metaboxes.php:41
-#: build/inc/theme-metaboxes.php:52 build/inc/theme-metaboxes.php:58
-#: build/inc/theme-metaboxes.php:172
+#: build/inc/options/shortcodes/shortcode-options.php:971
+#: build/inc/theme-metaboxes.php:32 build/inc/theme-metaboxes.php:38
+#: build/inc/theme-metaboxes.php:49 build/inc/theme-metaboxes.php:55
+#: build/inc/theme-metaboxes.php:169
 msgid "Swatch"
 msgstr ""
 
@@ -453,127 +453,127 @@ msgstr ""
 msgid "No Swatch found in Trash"
 msgstr ""
 
-#: build/inc/frontend.php:94
+#: build/inc/frontend.php:102
 msgid "Primary Navigation"
 msgstr ""
 
-#: build/inc/frontend.php:95
+#: build/inc/frontend.php:103
 msgid "Account Navigation"
 msgstr ""
 
-#: build/inc/frontend.php:290
+#: build/inc/frontend.php:300
 msgid "Pingback:"
 msgstr ""
 
-#: build/inc/frontend.php:290
+#: build/inc/frontend.php:300
 msgid "(Edit)"
 msgstr ""
 
-#: build/inc/frontend.php:311
+#: build/inc/frontend.php:321
 msgid "Reply"
 msgstr ""
 
-#: build/inc/frontend.php:367
+#: build/inc/frontend.php:377
 msgid "YOUR NAME *"
 msgstr ""
 
-#: build/inc/frontend.php:368
+#: build/inc/frontend.php:378
 msgid "YOUR EMAIL *"
 msgstr ""
 
-#: build/inc/frontend.php:372
+#: build/inc/frontend.php:382
 #, php-format
 msgid "Required fields are marked %s"
 msgstr ""
 
-#: build/inc/frontend.php:375
+#: build/inc/frontend.php:385
 msgid "YOUR MESSAGE"
 msgstr ""
 
-#: build/inc/frontend.php:376
+#: build/inc/frontend.php:386
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: build/inc/frontend.php:377
+#: build/inc/frontend.php:387
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: build/inc/frontend.php:383
+#: build/inc/frontend.php:393
 msgid "Add your comment"
 msgstr ""
 
-#: build/inc/frontend.php:384
+#: build/inc/frontend.php:394
 msgid "Leave a Reply"
 msgstr ""
 
-#: build/inc/frontend.php:385
+#: build/inc/frontend.php:395
 msgid "Cancel reply"
 msgstr ""
 
-#: build/inc/frontend.php:386
+#: build/inc/frontend.php:396
 msgid "Add comment"
 msgstr ""
 
-#: build/inc/frontend.php:1110
+#: build/inc/frontend.php:1124
 msgid "SEARCH"
 msgstr ""
 
-#: build/inc/frontend.php:1134
+#: build/inc/frontend.php:1148
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: build/inc/frontend.php:1135
+#: build/inc/frontend.php:1149
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: build/inc/frontend.php:1201
+#: build/inc/frontend.php:1215
 msgid "Next page"
 msgstr ""
 
-#: build/inc/frontend.php:1202
+#: build/inc/frontend.php:1216
 msgid "Previous page"
 msgstr ""
 
-#: build/inc/frontend.php:1301
+#: build/inc/frontend.php:1328
 #, php-format
 msgid "Search Results: &ldquo;%s&rdquo;"
 msgstr ""
 
-#: build/inc/frontend.php:1303
+#: build/inc/frontend.php:1330
 #, php-format
 msgid "&nbsp;&ndash; Page %s"
 msgstr ""
 
-#: build/inc/modules/tgm-plugin/plugin-options.php:142
+#: build/inc/modules/tgm-plugin/plugin-options.php:151
 msgid "Install Required Plugins"
 msgstr ""
 
-#: build/inc/modules/tgm-plugin/plugin-options.php:143
+#: build/inc/modules/tgm-plugin/plugin-options.php:152
 msgid "Install Plugins"
 msgstr ""
 
-#: build/inc/modules/tgm-plugin/plugin-options.php:144
+#: build/inc/modules/tgm-plugin/plugin-options.php:153
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: build/inc/modules/tgm-plugin/plugin-options.php:145
+#: build/inc/modules/tgm-plugin/plugin-options.php:154
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: build/inc/modules/tgm-plugin/plugin-options.php:156
+#: build/inc/modules/tgm-plugin/plugin-options.php:165
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: build/inc/modules/tgm-plugin/plugin-options.php:157
+#: build/inc/modules/tgm-plugin/plugin-options.php:166
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: build/inc/modules/tgm-plugin/plugin-options.php:158
+#: build/inc/modules/tgm-plugin/plugin-options.php:167
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
@@ -605,8 +605,8 @@ msgid ""
 "use the body font)"
 msgstr ""
 
-#: build/inc/option-pages.php:44 build/inc/theme-metaboxes.php:432
-#: build/inc/theme-metaboxes.php:544
+#: build/inc/option-pages.php:44 build/inc/theme-metaboxes.php:441
+#: build/inc/theme-metaboxes.php:553
 msgid "Text"
 msgstr ""
 
@@ -644,7 +644,7 @@ msgstr ""
 msgid "Normal Logo"
 msgstr ""
 
-#: build/inc/option-pages.php:79 build/inc/theme-metaboxes.php:125
+#: build/inc/option-pages.php:79 build/inc/theme-metaboxes.php:122
 msgid "Header Options"
 msgstr ""
 
@@ -665,8 +665,7 @@ msgid ""
 "how they look here</a>"
 msgstr ""
 
-#: build/inc/option-pages.php:88 build/inc/option-pages.php:1118
-#: build/inc/option-pages.php:1263
+#: build/inc/option-pages.php:88
 msgid "Standard"
 msgstr ""
 
@@ -689,6 +688,7 @@ msgid ""
 msgstr ""
 
 #: build/inc/option-pages.php:100
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:75
 msgid "Fixed"
 msgstr ""
 
@@ -894,47 +894,47 @@ msgstr ""
 
 #: build/inc/option-pages.php:260 build/inc/option-pages.php:563
 #: build/inc/option-pages.php:585 build/inc/option-pages.php:622
-#: build/inc/option-pages.php:638 build/inc/option-pages.php:1096
-#: build/inc/option-pages.php:1107 build/inc/option-pages.php:1130
-#: build/inc/option-pages.php:1196 build/inc/option-pages.php:1250
-#: build/inc/options/shortcodes/shortcode-options.php:75
-#: build/inc/options/shortcodes/shortcode-options.php:105
-#: build/inc/options/shortcodes/shortcode-options.php:115
-#: build/inc/options/shortcodes/shortcode-options.php:318
-#: build/inc/options/shortcodes/shortcode-options.php:470
-#: build/inc/options/shortcodes/shortcode-options.php:517
-#: build/inc/options/shortcodes/shortcode-options.php:527
-#: build/inc/options/shortcodes/shortcode-options.php:784
-#: build/inc/options/shortcodes/shortcode-options.php:814
-#: build/inc/options/shortcodes/shortcode-options.php:853
-#: build/inc/options/shortcodes/shortcode-options.php:894
+#: build/inc/option-pages.php:638 build/inc/option-pages.php:1113
+#: build/inc/option-pages.php:1130 build/inc/option-pages.php:1147
+#: build/inc/option-pages.php:1164
+#: build/inc/options/shortcodes/shortcode-options.php:76
+#: build/inc/options/shortcodes/shortcode-options.php:106
+#: build/inc/options/shortcodes/shortcode-options.php:116
+#: build/inc/options/shortcodes/shortcode-options.php:319
+#: build/inc/options/shortcodes/shortcode-options.php:471
+#: build/inc/options/shortcodes/shortcode-options.php:518
+#: build/inc/options/shortcodes/shortcode-options.php:528
+#: build/inc/options/shortcodes/shortcode-options.php:794
+#: build/inc/options/shortcodes/shortcode-options.php:824
+#: build/inc/options/shortcodes/shortcode-options.php:863
+#: build/inc/options/shortcodes/shortcode-options.php:904
 #: build/inc/options/widgets/widget-options/swatch_twitter-options.php:96
 #: build/inc/options/widgets/widget-options/swatch_twitter-options.php:107
 #: build/inc/options/widgets/widget-options/swatch_twitter-options.php:129
-#: build/inc/theme-metaboxes.php:118 build/inc/theme-metaboxes.php:149
+#: build/inc/theme-metaboxes.php:115 build/inc/theme-metaboxes.php:146
 msgid "Show"
 msgstr ""
 
 #: build/inc/option-pages.php:261 build/inc/option-pages.php:562
 #: build/inc/option-pages.php:584 build/inc/option-pages.php:621
-#: build/inc/option-pages.php:637 build/inc/option-pages.php:1097
-#: build/inc/option-pages.php:1108 build/inc/option-pages.php:1131
-#: build/inc/option-pages.php:1197 build/inc/option-pages.php:1251
-#: build/inc/options/shortcodes/shortcode-options.php:74
-#: build/inc/options/shortcodes/shortcode-options.php:104
-#: build/inc/options/shortcodes/shortcode-options.php:114
-#: build/inc/options/shortcodes/shortcode-options.php:319
-#: build/inc/options/shortcodes/shortcode-options.php:469
-#: build/inc/options/shortcodes/shortcode-options.php:516
-#: build/inc/options/shortcodes/shortcode-options.php:526
-#: build/inc/options/shortcodes/shortcode-options.php:785
-#: build/inc/options/shortcodes/shortcode-options.php:815
-#: build/inc/options/shortcodes/shortcode-options.php:854
-#: build/inc/options/shortcodes/shortcode-options.php:895
+#: build/inc/option-pages.php:637 build/inc/option-pages.php:1114
+#: build/inc/option-pages.php:1131 build/inc/option-pages.php:1148
+#: build/inc/option-pages.php:1165
+#: build/inc/options/shortcodes/shortcode-options.php:75
+#: build/inc/options/shortcodes/shortcode-options.php:105
+#: build/inc/options/shortcodes/shortcode-options.php:115
+#: build/inc/options/shortcodes/shortcode-options.php:320
+#: build/inc/options/shortcodes/shortcode-options.php:470
+#: build/inc/options/shortcodes/shortcode-options.php:517
+#: build/inc/options/shortcodes/shortcode-options.php:527
+#: build/inc/options/shortcodes/shortcode-options.php:795
+#: build/inc/options/shortcodes/shortcode-options.php:825
+#: build/inc/options/shortcodes/shortcode-options.php:864
+#: build/inc/options/shortcodes/shortcode-options.php:905
 #: build/inc/options/widgets/widget-options/swatch_twitter-options.php:95
 #: build/inc/options/widgets/widget-options/swatch_twitter-options.php:106
 #: build/inc/options/widgets/widget-options/swatch_twitter-options.php:128
-#: build/inc/theme-metaboxes.php:117 build/inc/theme-metaboxes.php:148
+#: build/inc/theme-metaboxes.php:114 build/inc/theme-metaboxes.php:145
 msgid "Hide"
 msgstr ""
 
@@ -948,19 +948,19 @@ msgid ""
 "layout"
 msgstr ""
 
-#: build/inc/option-pages.php:271 build/inc/option-pages.php:1346
-#: build/inc/theme-metaboxes.php:395
+#: build/inc/option-pages.php:271 build/inc/option-pages.php:1222
+#: build/inc/theme-metaboxes.php:404
 msgid "Right Sidebar"
 msgstr ""
 
-#: build/inc/option-pages.php:272 build/inc/option-pages.php:1347
+#: build/inc/option-pages.php:272 build/inc/option-pages.php:1223
 #: build/inc/options/shortcodes/shortcode-section-options.php:75
-#: build/inc/theme-metaboxes.php:393
+#: build/inc/theme-metaboxes.php:402
 msgid "Full Width"
 msgstr ""
 
-#: build/inc/option-pages.php:273 build/inc/option-pages.php:1348
-#: build/inc/theme-metaboxes.php:394
+#: build/inc/option-pages.php:273 build/inc/option-pages.php:1224
+#: build/inc/theme-metaboxes.php:403
 msgid "Left Sidebar"
 msgstr ""
 
@@ -992,16 +992,16 @@ msgstr ""
 #: build/inc/option-pages.php:376 build/inc/option-pages.php:411
 #: build/inc/option-pages.php:422 build/inc/option-pages.php:433
 #: build/inc/option-pages.php:552 build/inc/option-pages.php:755
-#: build/inc/option-pages.php:1359
-#: build/inc/options/shortcodes/shortcode-options.php:85
-#: build/inc/options/shortcodes/shortcode-options.php:95
-#: build/inc/options/shortcodes/shortcode-options.php:160
-#: build/inc/options/shortcodes/shortcode-options.php:232
-#: build/inc/options/shortcodes/shortcode-options.php:243
-#: build/inc/options/shortcodes/shortcode-options.php:254
-#: build/inc/options/shortcodes/shortcode-options.php:343
-#: build/inc/options/shortcodes/shortcode-options.php:643
-#: build/inc/options/shortcodes/shortcode-options.php:775
+#: build/inc/option-pages.php:1074 build/inc/option-pages.php:1235
+#: build/inc/options/shortcodes/shortcode-options.php:86
+#: build/inc/options/shortcodes/shortcode-options.php:96
+#: build/inc/options/shortcodes/shortcode-options.php:161
+#: build/inc/options/shortcodes/shortcode-options.php:233
+#: build/inc/options/shortcodes/shortcode-options.php:244
+#: build/inc/options/shortcodes/shortcode-options.php:255
+#: build/inc/options/shortcodes/shortcode-options.php:344
+#: build/inc/options/shortcodes/shortcode-options.php:644
+#: build/inc/options/shortcodes/shortcode-options.php:785
 #: build/inc/options/shortcodes/shortcode-section-options.php:53
 msgid "Off"
 msgstr ""
@@ -1019,16 +1019,17 @@ msgstr ""
 #: build/inc/option-pages.php:364 build/inc/option-pages.php:375
 #: build/inc/option-pages.php:410 build/inc/option-pages.php:421
 #: build/inc/option-pages.php:432 build/inc/option-pages.php:551
-#: build/inc/option-pages.php:754 build/inc/option-pages.php:1358
-#: build/inc/options/shortcodes/shortcode-options.php:84
-#: build/inc/options/shortcodes/shortcode-options.php:94
-#: build/inc/options/shortcodes/shortcode-options.php:159
-#: build/inc/options/shortcodes/shortcode-options.php:231
-#: build/inc/options/shortcodes/shortcode-options.php:242
-#: build/inc/options/shortcodes/shortcode-options.php:253
-#: build/inc/options/shortcodes/shortcode-options.php:342
-#: build/inc/options/shortcodes/shortcode-options.php:642
-#: build/inc/options/shortcodes/shortcode-options.php:774
+#: build/inc/option-pages.php:754 build/inc/option-pages.php:1073
+#: build/inc/option-pages.php:1234
+#: build/inc/options/shortcodes/shortcode-options.php:85
+#: build/inc/options/shortcodes/shortcode-options.php:95
+#: build/inc/options/shortcodes/shortcode-options.php:160
+#: build/inc/options/shortcodes/shortcode-options.php:232
+#: build/inc/options/shortcodes/shortcode-options.php:243
+#: build/inc/options/shortcodes/shortcode-options.php:254
+#: build/inc/options/shortcodes/shortcode-options.php:343
+#: build/inc/options/shortcodes/shortcode-options.php:643
+#: build/inc/options/shortcodes/shortcode-options.php:784
 #: build/inc/options/shortcodes/shortcode-section-options.php:54
 msgid "On"
 msgstr ""
@@ -1199,7 +1200,7 @@ msgstr ""
 msgid "Choose a color swatch for the author bio section"
 msgstr ""
 
-#: build/inc/option-pages.php:484 build/inc/option-pages.php:1325
+#: build/inc/option-pages.php:484 build/inc/option-pages.php:1201
 msgid "Pagination Swatch"
 msgstr ""
 
@@ -1212,7 +1213,7 @@ msgid "Flexslider Options"
 msgstr ""
 
 #: build/inc/option-pages.php:497
-#: build/inc/options/shortcodes/shortcode-options.php:710
+#: build/inc/options/shortcodes/shortcode-options.php:711
 msgid "Flexslider"
 msgstr ""
 
@@ -1221,57 +1222,57 @@ msgid "Setup your global default flexslider options."
 msgstr ""
 
 #: build/inc/option-pages.php:507
-#: build/inc/options/shortcodes/shortcode-options.php:730
+#: build/inc/options/shortcodes/shortcode-options.php:740
 msgid "Animation style"
 msgstr ""
 
 #: build/inc/option-pages.php:508
-#: build/inc/options/shortcodes/shortcode-options.php:731
+#: build/inc/options/shortcodes/shortcode-options.php:741
 msgid "Select how your slider animates"
 msgstr ""
 
 #: build/inc/option-pages.php:512
-#: build/inc/options/shortcodes/shortcode-options.php:735
+#: build/inc/options/shortcodes/shortcode-options.php:745
 msgid "Slide"
 msgstr ""
 
 #: build/inc/option-pages.php:513
-#: build/inc/options/shortcodes/shortcode-options.php:736
+#: build/inc/options/shortcodes/shortcode-options.php:746
 msgid "Fade"
 msgstr ""
 
 #: build/inc/option-pages.php:521
-#: build/inc/options/shortcodes/shortcode-options.php:744
+#: build/inc/options/shortcodes/shortcode-options.php:754
 msgid "Speed"
 msgstr ""
 
 #: build/inc/option-pages.php:522
-#: build/inc/options/shortcodes/shortcode-options.php:745
+#: build/inc/options/shortcodes/shortcode-options.php:755
 msgid "Set the speed of the slideshow cycling, in milliseconds"
 msgstr ""
 
 #: build/inc/option-pages.php:533
-#: build/inc/options/shortcodes/shortcode-options.php:756
+#: build/inc/options/shortcodes/shortcode-options.php:766
 msgid "Duration"
 msgstr ""
 
 #: build/inc/option-pages.php:534
-#: build/inc/options/shortcodes/shortcode-options.php:757
+#: build/inc/options/shortcodes/shortcode-options.php:767
 msgid "Set the speed of animations"
 msgstr ""
 
 #: build/inc/option-pages.php:545
-#: build/inc/options/shortcodes/shortcode-options.php:768
+#: build/inc/options/shortcodes/shortcode-options.php:778
 msgid "Auto start"
 msgstr ""
 
 #: build/inc/option-pages.php:549
-#: build/inc/options/shortcodes/shortcode-options.php:772
+#: build/inc/options/shortcodes/shortcode-options.php:782
 msgid "Start slideshow automatically"
 msgstr ""
 
 #: build/inc/option-pages.php:556
-#: build/inc/options/shortcodes/shortcode-options.php:779
+#: build/inc/options/shortcodes/shortcode-options.php:789
 msgid "Show navigation arrows"
 msgstr ""
 
@@ -1280,7 +1281,7 @@ msgid "Shows the navigation arrows at the sides of the flexslider."
 msgstr ""
 
 #: build/inc/option-pages.php:567
-#: build/inc/options/shortcodes/shortcode-options.php:789
+#: build/inc/options/shortcodes/shortcode-options.php:799
 msgid "Navigation arrows type"
 msgstr ""
 
@@ -1289,17 +1290,17 @@ msgid "Type of the direction arrows, fancy (with bg) or simple."
 msgstr ""
 
 #: build/inc/option-pages.php:573
-#: build/inc/options/shortcodes/shortcode-options.php:794
+#: build/inc/options/shortcodes/shortcode-options.php:804
 msgid "Simple"
 msgstr ""
 
 #: build/inc/option-pages.php:574
-#: build/inc/options/shortcodes/shortcode-options.php:795
+#: build/inc/options/shortcodes/shortcode-options.php:805
 msgid "Fancy"
 msgstr ""
 
 #: build/inc/option-pages.php:578
-#: build/inc/options/shortcodes/shortcode-options.php:809
+#: build/inc/options/shortcodes/shortcode-options.php:819
 msgid "Show controls"
 msgstr ""
 
@@ -1308,7 +1309,7 @@ msgid "If you choose hide the option below will be ignored"
 msgstr ""
 
 #: build/inc/option-pages.php:589
-#: build/inc/options/shortcodes/shortcode-options.php:819
+#: build/inc/options/shortcodes/shortcode-options.php:829
 msgid "Choose the place of the controls"
 msgstr ""
 
@@ -1317,17 +1318,17 @@ msgid "Choose the position of the navigation controls"
 msgstr ""
 
 #: build/inc/option-pages.php:595
-#: build/inc/options/shortcodes/shortcode-options.php:824
+#: build/inc/options/shortcodes/shortcode-options.php:834
 msgid "Inside"
 msgstr ""
 
 #: build/inc/option-pages.php:596
-#: build/inc/options/shortcodes/shortcode-options.php:825
+#: build/inc/options/shortcodes/shortcode-options.php:835
 msgid "Outside"
 msgstr ""
 
 #: build/inc/option-pages.php:600
-#: build/inc/options/shortcodes/shortcode-options.php:829
+#: build/inc/options/shortcodes/shortcode-options.php:839
 msgid "Choose the alignment of the controls"
 msgstr ""
 
@@ -1336,31 +1337,29 @@ msgid "Choose the alignment of the navigation controls"
 msgstr ""
 
 #: build/inc/option-pages.php:605
-#: build/inc/options/shortcodes/shortcode-options.php:833
-#: build/inc/theme-metaboxes.php:160
+#: build/inc/options/shortcodes/shortcode-options.php:843
+#: build/inc/theme-metaboxes.php:157
 msgid "Center"
 msgstr ""
 
 #: build/inc/option-pages.php:606 build/inc/option-pages.php:659
-#: build/inc/option-pages.php:1289
-#: build/inc/options/shortcodes/shortcode-options.php:834
-#: build/inc/options/shortcodes/shortcode-options.php:874
-#: build/inc/options/shortcodes/shortcode-options.php:1015
-#: build/inc/theme-metaboxes.php:159
+#: build/inc/options/shortcodes/shortcode-options.php:844
+#: build/inc/options/shortcodes/shortcode-options.php:884
+#: build/inc/options/shortcodes/shortcode-options.php:1025
+#: build/inc/theme-metaboxes.php:156
 msgid "Left"
 msgstr ""
 
 #: build/inc/option-pages.php:607 build/inc/option-pages.php:660
-#: build/inc/option-pages.php:1287
-#: build/inc/options/shortcodes/shortcode-options.php:835
-#: build/inc/options/shortcodes/shortcode-options.php:875
-#: build/inc/options/shortcodes/shortcode-options.php:1016
-#: build/inc/theme-metaboxes.php:161
+#: build/inc/options/shortcodes/shortcode-options.php:845
+#: build/inc/options/shortcodes/shortcode-options.php:885
+#: build/inc/options/shortcodes/shortcode-options.php:1026
+#: build/inc/theme-metaboxes.php:158
 msgid "Right"
 msgstr ""
 
 #: build/inc/option-pages.php:615
-#: build/inc/options/shortcodes/shortcode-options.php:892
+#: build/inc/options/shortcodes/shortcode-options.php:902
 msgid "Show tooltip"
 msgstr ""
 
@@ -1369,12 +1368,12 @@ msgid "Display the slide title as tooltip"
 msgstr ""
 
 #: build/inc/option-pages.php:628
-#: build/inc/options/shortcodes/shortcode-options.php:845
+#: build/inc/options/shortcodes/shortcode-options.php:855
 msgid "Captions"
 msgstr ""
 
 #: build/inc/option-pages.php:631
-#: build/inc/options/shortcodes/shortcode-options.php:848
+#: build/inc/options/shortcodes/shortcode-options.php:858
 msgid "Show Captions"
 msgstr ""
 
@@ -1383,7 +1382,7 @@ msgid "If you choose hide the options below will be ignored"
 msgstr ""
 
 #: build/inc/option-pages.php:642
-#: build/inc/options/shortcodes/shortcode-options.php:858
+#: build/inc/options/shortcodes/shortcode-options.php:868
 msgid "Captions Vertical Position"
 msgstr ""
 
@@ -1391,38 +1390,38 @@ msgstr ""
 msgid "Choose between bottom and top positioning"
 msgstr ""
 
-#: build/inc/option-pages.php:648 build/inc/option-pages.php:1286
-#: build/inc/options/shortcodes/shortcode-options.php:863
+#: build/inc/option-pages.php:648
+#: build/inc/options/shortcodes/shortcode-options.php:873
 msgid "Top"
 msgstr ""
 
-#: build/inc/option-pages.php:649 build/inc/option-pages.php:1288
-#: build/inc/options/shortcodes/shortcode-options.php:864
+#: build/inc/option-pages.php:649
+#: build/inc/options/shortcodes/shortcode-options.php:874
 msgid "Bottom"
 msgstr ""
 
 #: build/inc/option-pages.php:653
-#: build/inc/options/shortcodes/shortcode-options.php:868
+#: build/inc/options/shortcodes/shortcode-options.php:878
 msgid "Captions Horizontal Position"
 msgstr ""
 
 #: build/inc/option-pages.php:654
-#: build/inc/options/shortcodes/shortcode-options.php:869
+#: build/inc/options/shortcodes/shortcode-options.php:879
 msgid "Choose among left, right and alternate positioning"
 msgstr ""
 
 #: build/inc/option-pages.php:661
-#: build/inc/options/shortcodes/shortcode-options.php:876
+#: build/inc/options/shortcodes/shortcode-options.php:886
 msgid "Alternate"
 msgstr ""
 
 #: build/inc/option-pages.php:665
-#: build/inc/options/shortcodes/shortcode-options.php:880
+#: build/inc/options/shortcodes/shortcode-options.php:890
 msgid "Captions Swatch"
 msgstr ""
 
 #: build/inc/option-pages.php:666
-#: build/inc/options/shortcodes/shortcode-options.php:881
+#: build/inc/options/shortcodes/shortcode-options.php:891
 msgid "Choose a color swatch for the captions"
 msgstr ""
 
@@ -1489,9 +1488,9 @@ msgid "Portfolio Page Options"
 msgstr ""
 
 #: build/inc/option-pages.php:725
-#: build/inc/options/shortcodes/shortcode-options.php:279
-#: build/inc/options/shortcodes/shortcode-options.php:284
-#: build/inc/theme-metaboxes.php:208
+#: build/inc/options/shortcodes/shortcode-options.php:280
+#: build/inc/options/shortcodes/shortcode-options.php:285
+#: build/inc/theme-metaboxes.php:205
 msgid "Portfolio"
 msgstr ""
 
@@ -1609,9 +1608,9 @@ msgid "Content that is shown in the top box over a map"
 msgstr ""
 
 #: build/inc/option-pages.php:832 build/inc/option-pages.php:869
-#: build/inc/options/shortcodes/shortcode-options.php:559
-#: build/inc/options/shortcodes/shortcode-options.php:974
-#: build/inc/theme-metaboxes.php:81 build/inc/theme-metaboxes.php:87
+#: build/inc/options/shortcodes/shortcode-options.php:560
+#: build/inc/options/shortcodes/shortcode-options.php:984
+#: build/inc/theme-metaboxes.php:78 build/inc/theme-metaboxes.php:84
 msgid "Icon"
 msgstr ""
 
@@ -1620,15 +1619,15 @@ msgid "Icon that is shown in the top box on map overlay"
 msgstr ""
 
 #: build/inc/option-pages.php:840 build/inc/option-pages.php:877
-#: build/inc/options/shortcodes/shortcode-options.php:566
-#: build/inc/options/shortcodes/shortcode-options.php:980
-#: build/inc/theme-metaboxes.php:94
+#: build/inc/options/shortcodes/shortcode-options.php:567
+#: build/inc/options/shortcodes/shortcode-options.php:990
+#: build/inc/theme-metaboxes.php:91
 msgid "Icon Animation"
 msgstr ""
 
 #: build/inc/option-pages.php:841 build/inc/option-pages.php:878
-#: build/inc/options/shortcodes/shortcode-options.php:567
-#: build/inc/options/shortcodes/shortcode-options.php:981
+#: build/inc/options/shortcodes/shortcode-options.php:568
+#: build/inc/options/shortcodes/shortcode-options.php:991
 msgid "Choose an icon animation"
 msgstr ""
 
@@ -1824,336 +1823,166 @@ msgid ""
 "Upload an icon to be used by iPad Retina as a bookmark (144 x 144 pixels)"
 msgstr ""
 
-#: build/inc/option-pages.php:1064 build/inc/option-pages.php:1068
-msgid "Google Analytics"
+#: build/inc/option-pages.php:1064
+msgid "Mobile"
 msgstr ""
 
 #: build/inc/option-pages.php:1065
+msgid "Here you can configure settings targeted at mobile devices"
+msgstr ""
+
+#: build/inc/option-pages.php:1068
+msgid "Background Videos"
+msgstr ""
+
+#: build/inc/option-pages.php:1069
+msgid ""
+"Here you can enable section background videos for mobile. By default it is "
+"set to off in order to save bandwidth. Section background image will be "
+"displayed as a fallback"
+msgstr ""
+
+#: build/inc/option-pages.php:1081 build/inc/option-pages.php:1085
+msgid "Google Analytics"
+msgstr ""
+
+#: build/inc/option-pages.php:1082
 msgid ""
 "Set your Google Analytics Tracker and keep track of visitors to your site."
 msgstr ""
 
-#: build/inc/option-pages.php:1069
+#: build/inc/option-pages.php:1086
 msgid "Paste your google analytics code here"
 msgstr ""
 
-#: build/inc/option-pages.php:1080
+#: build/inc/option-pages.php:1097
 msgid "Social Options"
 msgstr ""
 
-#: build/inc/option-pages.php:1081 build/inc/theme-metaboxes.php:330
+#: build/inc/option-pages.php:1098 build/inc/theme-metaboxes.php:339
 msgid "Social"
 msgstr ""
 
-#: build/inc/option-pages.php:1087
+#: build/inc/option-pages.php:1104
 msgid "Facebook Like"
 msgstr ""
 
-#: build/inc/option-pages.php:1088
+#: build/inc/option-pages.php:1105
 msgid "Set the style of facebook like button"
 msgstr ""
 
-#: build/inc/option-pages.php:1091
+#: build/inc/option-pages.php:1108
 msgid "Show Like Button"
 msgstr ""
 
-#: build/inc/option-pages.php:1092
+#: build/inc/option-pages.php:1109
 msgid "Show facebook like button on your single blog pages"
 msgstr ""
 
-#: build/inc/option-pages.php:1102
-msgid "Show Send Button"
-msgstr ""
-
-#: build/inc/option-pages.php:1103
-msgid "Choose a layout for your like button."
-msgstr ""
-
-#: build/inc/option-pages.php:1113
-#: build/inc/options/shortcodes/shortcode-options.php:362
-msgid "Layout"
-msgstr ""
-
-#: build/inc/option-pages.php:1114
-msgid "Include a Send button with the Like button."
-msgstr ""
-
-#: build/inc/option-pages.php:1119
-msgid "Button Count"
-msgstr ""
-
-#: build/inc/option-pages.php:1120
-msgid "Box Count"
-msgstr ""
-
-#: build/inc/option-pages.php:1125
-msgid "Show Faces"
-msgstr ""
-
-#: build/inc/option-pages.php:1126
-msgid "Display profile photos below the button (standard layout only)"
-msgstr ""
-
-#: build/inc/option-pages.php:1136
-msgid "Width"
-msgstr ""
-
-#: build/inc/option-pages.php:1137
-msgid "Width of the Like button."
-msgstr ""
-
-#: build/inc/option-pages.php:1148
-msgid "Button Text"
-msgstr ""
-
-#: build/inc/option-pages.php:1149
-msgid "Verb to display on the button"
-msgstr ""
-
-#: build/inc/option-pages.php:1153
-msgid "Like"
-msgstr ""
-
-#: build/inc/option-pages.php:1154
-msgid "Recommend"
-msgstr ""
-
-#: build/inc/option-pages.php:1159
-msgid "Button Font"
-msgstr ""
-
-#: build/inc/option-pages.php:1160
-msgid "Font to display in the button"
-msgstr ""
-
-#: build/inc/option-pages.php:1164
-msgid "Arial"
-msgstr ""
-
-#: build/inc/option-pages.php:1165
-msgid "Lucida Grande"
-msgstr ""
-
-#: build/inc/option-pages.php:1166
-msgid "Segoe ui"
-msgstr ""
-
-#: build/inc/option-pages.php:1167
-msgid "Tahoma"
-msgstr ""
-
-#: build/inc/option-pages.php:1168
-msgid "Trebuchet ms"
-msgstr ""
-
-#: build/inc/option-pages.php:1169
-msgid "Verdana"
-msgstr ""
-
-#: build/inc/option-pages.php:1174
-msgid "Button Colour"
-msgstr ""
-
-#: build/inc/option-pages.php:1175
-msgid "Color scheme for the like button."
-msgstr ""
-
-#: build/inc/option-pages.php:1179
-msgid "Light"
-msgstr ""
-
-#: build/inc/option-pages.php:1180
-msgid "Dark"
-msgstr ""
-
-#: build/inc/option-pages.php:1187
+#: build/inc/option-pages.php:1121
 #: build/inc/options/widgets/widget-options/swatch_twitter-options.php:17
 msgid "Twitter"
 msgstr ""
 
-#: build/inc/option-pages.php:1188
+#: build/inc/option-pages.php:1122
 msgid "Set the style of twitter tweet button"
 msgstr ""
 
-#: build/inc/option-pages.php:1191
+#: build/inc/option-pages.php:1125
 msgid "Show Tweet Button"
 msgstr ""
 
-#: build/inc/option-pages.php:1192
+#: build/inc/option-pages.php:1126
 msgid "Show tweet like button on your single blog pages"
 msgstr ""
 
-#: build/inc/option-pages.php:1202
-msgid "Tweet Text"
-msgstr ""
-
-#: build/inc/option-pages.php:1203
-msgid "Default Tweet text. Leave blank to use page title."
-msgstr ""
-
-#: build/inc/option-pages.php:1206
-msgid "Check out this great post"
-msgstr ""
-
-#: build/inc/option-pages.php:1209
-msgid "Tweet Hashtags"
-msgstr ""
-
-#: build/inc/option-pages.php:1210
-msgid "Hashtags to include in tweet. (comma separated without the # symbol)"
-msgstr ""
-
-#: build/inc/option-pages.php:1216
-msgid "Count Box Position"
-msgstr ""
-
-#: build/inc/option-pages.php:1217
-msgid "Choose where to show the tweet count box"
-msgstr ""
-
-#: build/inc/option-pages.php:1221
-msgid "No Count Box"
-msgstr ""
-
-#: build/inc/option-pages.php:1222
-msgid "Horizontal"
-msgstr ""
-
-#: build/inc/option-pages.php:1223
-msgid "Vertical"
-msgstr ""
-
-#: build/inc/option-pages.php:1228 build/inc/option-pages.php:1256
-msgid "Button Size"
-msgstr ""
-
-#: build/inc/option-pages.php:1229
-msgid "Choose a size for your tweet button"
-msgstr ""
-
-#: build/inc/option-pages.php:1233 build/inc/option-pages.php:1262
-#: build/inc/options/shortcodes/shortcode-image-options.php:37
-#: build/inc/options/shortcodes/shortcode-options.php:922
-msgid "Medium"
-msgstr ""
-
-#: build/inc/option-pages.php:1234
-msgid "Large"
-msgstr ""
-
-#: build/inc/option-pages.php:1241
+#: build/inc/option-pages.php:1138
 msgid "Google +"
 msgstr ""
 
-#: build/inc/option-pages.php:1242
+#: build/inc/option-pages.php:1139
 msgid "Set the style of your google plus button"
 msgstr ""
 
-#: build/inc/option-pages.php:1245
+#: build/inc/option-pages.php:1142
 msgid "Show Google+ Button"
 msgstr ""
 
-#: build/inc/option-pages.php:1246
+#: build/inc/option-pages.php:1143
 msgid "Show G+ button on your single blog pages"
 msgstr ""
 
-#: build/inc/option-pages.php:1257
-msgid "Size of google plus button"
+#: build/inc/option-pages.php:1155
+msgid "Pinterest"
 msgstr ""
 
-#: build/inc/option-pages.php:1261
-#: build/inc/options/shortcodes/shortcode-image-options.php:36
-#: build/inc/options/shortcodes/shortcode-options.php:921
-msgid "Small"
+#: build/inc/option-pages.php:1156
+msgid "Set the style of your pinterest button"
 msgstr ""
 
-#: build/inc/option-pages.php:1264
-msgid "Tall"
+#: build/inc/option-pages.php:1159
+msgid "Show Pinterest Button"
 msgstr ""
 
-#: build/inc/option-pages.php:1269
-msgid "Button Bubble"
+#: build/inc/option-pages.php:1160
+msgid "Show Pinterest button on your single blog pages"
 msgstr ""
 
-#: build/inc/option-pages.php:1270
-msgid "Sets the annotation to display next to the button."
-msgstr ""
-
-#: build/inc/option-pages.php:1274
-msgid "None"
-msgstr ""
-
-#: build/inc/option-pages.php:1275
-msgid "Bubble"
-msgstr ""
-
-#: build/inc/option-pages.php:1276
-msgid "Inline"
-msgstr ""
-
-#: build/inc/option-pages.php:1281
-msgid "Expand To"
-msgstr ""
-
-#: build/inc/option-pages.php:1282
-msgid "Sets the preferred positions to display hover and confirmation bubbles"
-msgstr ""
-
-#: build/inc/option-pages.php:1298 build/inc/option-pages.php:1299
+#: build/inc/option-pages.php:1174 build/inc/option-pages.php:1175
 msgid "WooCommerce"
 msgstr ""
 
-#: build/inc/option-pages.php:1305
+#: build/inc/option-pages.php:1181
 msgid "Shop Options"
 msgstr ""
 
-#: build/inc/option-pages.php:1306
+#: build/inc/option-pages.php:1182
 msgid "Change the way your shop page looks with these options."
 msgstr ""
 
-#: build/inc/option-pages.php:1309
+#: build/inc/option-pages.php:1185
 msgid "General Shop Swatch"
 msgstr ""
 
-#: build/inc/option-pages.php:1310
+#: build/inc/option-pages.php:1186
 msgid "Choose a general colour scheme to use for your WooCommerce site."
 msgstr ""
 
-#: build/inc/option-pages.php:1317
+#: build/inc/option-pages.php:1193
 msgid "Category Header Swatch"
 msgstr ""
 
-#: build/inc/option-pages.php:1318
+#: build/inc/option-pages.php:1194
 msgid "Choose a swatch to use for your WooCommerce category headers."
 msgstr ""
 
-#: build/inc/option-pages.php:1326
+#: build/inc/option-pages.php:1202
 msgid "Choose a color swatch pagination"
 msgstr ""
 
-#: build/inc/option-pages.php:1333
+#: build/inc/option-pages.php:1209
 msgid "Checkout Slide Sidebar Swatch"
 msgstr ""
 
-#: build/inc/option-pages.php:1334
+#: build/inc/option-pages.php:1210
 msgid "Choose a color swatch the cart that slides in from the side."
 msgstr ""
 
-#: build/inc/option-pages.php:1341
+#: build/inc/option-pages.php:1217
 msgid "Shop Layout"
 msgstr ""
 
-#: build/inc/option-pages.php:1342
+#: build/inc/option-pages.php:1218
 msgid ""
 "Layout of your shop page. Choose among right sidebar, left sidebar, "
 "fullwidth layout"
 msgstr ""
 
-#: build/inc/option-pages.php:1353
+#: build/inc/option-pages.php:1229
 msgid "Social Icons In Product Details"
 msgstr ""
 
-#: build/inc/option-pages.php:1354
+#: build/inc/option-pages.php:1230
 msgid "Display social icons in product details page"
 msgstr ""
 
@@ -2443,17 +2272,27 @@ msgid "Choose the size of the image"
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-image-options.php:35
-#: build/inc/options/shortcodes/shortcode-options.php:920
+#: build/inc/options/shortcodes/shortcode-options.php:930
 msgid "Mini"
 msgstr ""
 
+#: build/inc/options/shortcodes/shortcode-image-options.php:36
+#: build/inc/options/shortcodes/shortcode-options.php:931
+msgid "Small"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-image-options.php:37
+#: build/inc/options/shortcodes/shortcode-options.php:932
+msgid "Medium"
+msgstr ""
+
 #: build/inc/options/shortcodes/shortcode-image-options.php:38
-#: build/inc/options/shortcodes/shortcode-options.php:923
+#: build/inc/options/shortcodes/shortcode-options.php:933
 msgid "Big"
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-image-options.php:39
-#: build/inc/options/shortcodes/shortcode-options.php:924
+#: build/inc/options/shortcodes/shortcode-options.php:934
 msgid "Huge"
 msgstr ""
 
@@ -2478,7 +2317,7 @@ msgid "Number of services to show"
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-options.php:58
-#: build/inc/options/shortcodes/shortcode-options.php:397
+#: build/inc/options/shortcodes/shortcode-options.php:398
 msgid "Columns"
 msgstr ""
 
@@ -2487,552 +2326,575 @@ msgid "Number columns to show the services in"
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-options.php:63
-msgid "Three columns"
+msgid "Two columns"
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-options.php:64
+msgid "Three columns"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-options.php:65
 msgid "Four columns"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:69
+#: build/inc/options/shortcodes/shortcode-options.php:70
 msgid "Show Titles"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:79
+#: build/inc/options/shortcodes/shortcode-options.php:80
 msgid "Link Title"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:89
+#: build/inc/options/shortcodes/shortcode-options.php:90
 msgid "Link Image"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:99
+#: build/inc/options/shortcodes/shortcode-options.php:100
 msgid "Show Excerpt"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:109
+#: build/inc/options/shortcodes/shortcode-options.php:110
 msgid "Show Readmore Link"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:119
+#: build/inc/options/shortcodes/shortcode-options.php:120
 msgid "Readmore Link Text"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:123
+#: build/inc/options/shortcodes/shortcode-options.php:124
 msgid "Customize your readmore link"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:143
+#: build/inc/options/shortcodes/shortcode-options.php:144
 msgid "Choose a group"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:144
+#: build/inc/options/shortcodes/shortcode-options.php:145
 msgid "Group of testimonials to show"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:150
+#: build/inc/options/shortcodes/shortcode-options.php:151
 msgid "All Testimonials"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:153
+#: build/inc/options/shortcodes/shortcode-options.php:154
 msgid "Show avatars"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:154
+#: build/inc/options/shortcodes/shortcode-options.php:155
 msgid "Display the feature image as avatar"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:164
+#: build/inc/options/shortcodes/shortcode-options.php:165
 msgid "Number Of Testimonials"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:165
+#: build/inc/options/shortcodes/shortcode-options.php:166
 msgid "Number of Testimonials to display"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:184
-#: build/inc/options/shortcodes/shortcode-options.php:189
+#: build/inc/options/shortcodes/shortcode-options.php:185
+#: build/inc/options/shortcodes/shortcode-options.php:190
 msgid "Staff members list"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:192
+#: build/inc/options/shortcodes/shortcode-options.php:193
 msgid "Choose a department"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:193
+#: build/inc/options/shortcodes/shortcode-options.php:194
 msgid "Populate your list from a department"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:199
+#: build/inc/options/shortcodes/shortcode-options.php:200
 msgid "Select a department"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:202
+#: build/inc/options/shortcodes/shortcode-options.php:203
 msgid "Number Of members"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:203
+#: build/inc/options/shortcodes/shortcode-options.php:204
 msgid "Number of members to display"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:214
+#: build/inc/options/shortcodes/shortcode-options.php:215
 msgid "List Columns"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:215
+#: build/inc/options/shortcodes/shortcode-options.php:216
 msgid "Number of columns to show staff in"
-msgstr ""
-
-#: build/inc/options/shortcodes/shortcode-options.php:220
-#: build/inc/options/shortcodes/shortcode-options.php:405
-msgid "3 Columns"
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-options.php:221
 #: build/inc/options/shortcodes/shortcode-options.php:406
+msgid "3 Columns"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-options.php:222
+#: build/inc/options/shortcodes/shortcode-options.php:407
 msgid "4 Columns"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:225
+#: build/inc/options/shortcodes/shortcode-options.php:226
 msgid "Show title"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:226
+#: build/inc/options/shortcodes/shortcode-options.php:227
 msgid "Display the staff title and position"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:236
+#: build/inc/options/shortcodes/shortcode-options.php:237
 msgid "Link in title"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:237
+#: build/inc/options/shortcodes/shortcode-options.php:238
 msgid "Make the title link to the single staff page"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:247
+#: build/inc/options/shortcodes/shortcode-options.php:248
 msgid "Show Description"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:248
+#: build/inc/options/shortcodes/shortcode-options.php:249
 msgid "Display the staff description below title"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:258
+#: build/inc/options/shortcodes/shortcode-options.php:259
 msgid "Open Link In"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:263
-#: build/inc/theme-metaboxes.php:271
+#: build/inc/options/shortcodes/shortcode-options.php:264
+#: build/inc/theme-metaboxes.php:280
 msgid "Same page as it was clicked "
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:264
-#: build/inc/theme-metaboxes.php:272
+#: build/inc/options/shortcodes/shortcode-options.php:265
+#: build/inc/theme-metaboxes.php:281
 msgid "Open in new window/tab"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:265
+#: build/inc/options/shortcodes/shortcode-options.php:266
 msgid "Open the linked document in the parent frameset"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:266
+#: build/inc/options/shortcodes/shortcode-options.php:267
 msgid "Open the linked document in the full body of the window"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:268
+#: build/inc/options/shortcodes/shortcode-options.php:269
 msgid "Where the social links open to"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:287
+#: build/inc/options/shortcodes/shortcode-options.php:288
 msgid "Portfolios"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:288
+#: build/inc/options/shortcodes/shortcode-options.php:289
 msgid "Portfolios to show (leave blank to show all)"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:300
+#: build/inc/options/shortcodes/shortcode-options.php:301
 msgid "Portfolio Columns"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:301
+#: build/inc/options/shortcodes/shortcode-options.php:302
 msgid "Number of columns to show the portfolio in"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:312
+#: build/inc/options/shortcodes/shortcode-options.php:313
 msgid "Portfolio Filters"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:313
+#: build/inc/options/shortcodes/shortcode-options.php:314
 msgid "Show filter navigation"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:324
+#: build/inc/options/shortcodes/shortcode-options.php:325
 msgid "Number of portfolio items to display  (per page if pagination is on )"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:325
-#: build/inc/options/shortcodes/shortcode-options.php:337
+#: build/inc/options/shortcodes/shortcode-options.php:326
+#: build/inc/options/shortcodes/shortcode-options.php:338
 msgid "Number of portfolio items to display"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:336
+#: build/inc/options/shortcodes/shortcode-options.php:337
 msgid "Use pagination"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:354
-#: build/inc/options/shortcodes/shortcode-options.php:359
+#: build/inc/options/shortcodes/shortcode-options.php:355
+#: build/inc/options/shortcodes/shortcode-options.php:360
 msgid "Recent Posts"
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-options.php:363
+msgid "Layout"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-options.php:364
 msgid "Section Layout"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:368
+#: build/inc/options/shortcodes/shortcode-options.php:369
 msgid "Carousel"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:369
+#: build/inc/options/shortcodes/shortcode-options.php:370
 msgid "Masonry"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:373
+#: build/inc/options/shortcodes/shortcode-options.php:374
 msgid "Number of posts"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:374
+#: build/inc/options/shortcodes/shortcode-options.php:375
 msgid "Number of posts to display per page"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:385
+#: build/inc/options/shortcodes/shortcode-options.php:386
 msgid "Post category"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:386
+#: build/inc/options/shortcodes/shortcode-options.php:387
 msgid "Choose posts from a specific category"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:398
+#: build/inc/options/shortcodes/shortcode-options.php:399
 msgid "Number of columns to show posts in"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:403
+#: build/inc/options/shortcodes/shortcode-options.php:404
 msgid "1 Column"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:404
+#: build/inc/options/shortcodes/shortcode-options.php:405
 msgid "2 Columns"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:418
+#: build/inc/options/shortcodes/shortcode-options.php:419
 msgid "Google Map"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:423
+#: build/inc/options/shortcodes/shortcode-options.php:424
 msgid "Map"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:426
+#: build/inc/options/shortcodes/shortcode-options.php:427
 msgid "Map Type"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:431
+#: build/inc/options/shortcodes/shortcode-options.php:432
 msgid "Roadmap"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:432
+#: build/inc/options/shortcodes/shortcode-options.php:433
 msgid "Satellite"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:433
+#: build/inc/options/shortcodes/shortcode-options.php:434
 msgid "Terrain"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:434
+#: build/inc/options/shortcodes/shortcode-options.php:435
 msgid "Hybrid"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:438
+#: build/inc/options/shortcodes/shortcode-options.php:439
 msgid "Map Zoom"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:449
+#: build/inc/options/shortcodes/shortcode-options.php:450
 msgid "Map Style"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:454
+#: build/inc/options/shortcodes/shortcode-options.php:455
 msgid "Flat"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:455
+#: build/inc/options/shortcodes/shortcode-options.php:456
 msgid "Regular"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:461
+#: build/inc/options/shortcodes/shortcode-options.php:462
 msgid "Marker"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:464
+#: build/inc/options/shortcodes/shortcode-options.php:465
 msgid "Show Marker"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:474
+#: build/inc/options/shortcodes/shortcode-options.php:475
 msgid "Marker Address"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:475
+#: build/inc/options/shortcodes/shortcode-options.php:476
 msgid "Address to show marker"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:481
+#: build/inc/options/shortcodes/shortcode-options.php:482
 msgid "Marker Latitude"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:482
+#: build/inc/options/shortcodes/shortcode-options.php:483
 msgid "Latitude of marker (if you dont want to use address)"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:488
+#: build/inc/options/shortcodes/shortcode-options.php:489
 msgid "Marker Longitude"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:489
+#: build/inc/options/shortcodes/shortcode-options.php:490
 msgid "Longitude of marker (if you dont want to use address)"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:497
+#: build/inc/options/shortcodes/shortcode-options.php:498
 msgid "Section"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:500
+#: build/inc/options/shortcodes/shortcode-options.php:501
 msgid "Map Section Height"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:511
+#: build/inc/options/shortcodes/shortcode-options.php:512
 msgid "Show Top Contact Details Box"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:521
+#: build/inc/options/shortcodes/shortcode-options.php:522
 msgid "Show Bottom Contact Details Box"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:537
-#: build/inc/options/shortcodes/shortcode-options.php:542
+#: build/inc/options/shortcodes/shortcode-options.php:538
+#: build/inc/options/shortcodes/shortcode-options.php:543
 msgid "Pie Chart"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:545
+#: build/inc/options/shortcodes/shortcode-options.php:546
 msgid "Track Colour"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:546
+#: build/inc/options/shortcodes/shortcode-options.php:547
 msgid "Choose the chart track colour"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:552
+#: build/inc/options/shortcodes/shortcode-options.php:553
 msgid "Bar Colour"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:553
+#: build/inc/options/shortcodes/shortcode-options.php:554
 msgid "Choose the chart bar colour"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:560
+#: build/inc/options/shortcodes/shortcode-options.php:561
 msgid "Choose a chart icon"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:574
+#: build/inc/options/shortcodes/shortcode-options.php:575
 msgid "Percentage"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:575
+#: build/inc/options/shortcodes/shortcode-options.php:576
 msgid "Percentage of the pie chart"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:586
+#: build/inc/options/shortcodes/shortcode-options.php:587
 msgid "Size"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:587
+#: build/inc/options/shortcodes/shortcode-options.php:588
 msgid "Set the size of the chart"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:598
+#: build/inc/options/shortcodes/shortcode-options.php:599
 msgid "Line Width"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:599
+#: build/inc/options/shortcodes/shortcode-options.php:600
 msgid "Set the width of the charts line"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:616
+#: build/inc/options/shortcodes/shortcode-options.php:617
 msgid "Pricing Column"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:622
+#: build/inc/options/shortcodes/shortcode-options.php:623
 msgid "Fancylist"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:629
+#: build/inc/options/shortcodes/shortcode-options.php:630
 msgid "Social Icons List"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:637
+#: build/inc/options/shortcodes/shortcode-options.php:638
 #: build/inc/options/widgets/widget-options/swatch_social-options.php:24
 msgid "Open links in new window"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:647
+#: build/inc/options/shortcodes/shortcode-options.php:648
 #: build/inc/options/widgets/widget-options/swatch_social-options.php:31
 msgid "Social icons style"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:651
+#: build/inc/options/shortcodes/shortcode-options.php:652
 msgid "With background"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:652
+#: build/inc/options/shortcodes/shortcode-options.php:653
 msgid "No background"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:657
+#: build/inc/options/shortcodes/shortcode-options.php:658
 #: build/inc/options/widgets/widget-options/swatch_social-options.php:42
 msgid "Social icons size"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:661
+#: build/inc/options/shortcodes/shortcode-options.php:662
 msgid "normal"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:662
+#: build/inc/options/shortcodes/shortcode-options.php:663
 msgid "mini"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:667
+#: build/inc/options/shortcodes/shortcode-options.php:668
 msgid "Social Icons"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:668
+#: build/inc/options/shortcodes/shortcode-options.php:669
 msgid "Number of social icons"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:703
+#: build/inc/options/shortcodes/shortcode-options.php:704
 msgid "Choose a Slider"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:704
+#: build/inc/options/shortcodes/shortcode-options.php:705
 msgid "Choose a between revolution and flexslider"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:709
+#: build/inc/options/shortcodes/shortcode-options.php:710
 msgid "Revolution Slider"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:714
-#: build/inc/theme-metaboxes.php:556
+#: build/inc/options/shortcodes/shortcode-options.php:712
+msgid "LayerSLider"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-options.php:716
+#: build/inc/theme-metaboxes.php:565
 msgid "Choose a Revolution Slider"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:715
-#: build/inc/options/shortcodes/shortcode-options.php:723
-msgid "Populate your slider with one of the slideshows you created"
+#: build/inc/options/shortcodes/shortcode-options.php:717
+msgid "Populate your slider with one of the Revolution Sliders you created"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:722
+#: build/inc/options/shortcodes/shortcode-options.php:724
+msgid "Choose a Layerslider"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-options.php:725
+msgid "Populate your slider with one of the LayerSliders you created"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-options.php:732
 msgid "Choose a Flexslider"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:799
+#: build/inc/options/shortcodes/shortcode-options.php:733
+msgid "Populate your slider with one of the Flexsliders you created"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-options.php:809
 msgid "Item width"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:800
+#: build/inc/options/shortcodes/shortcode-options.php:810
 msgid "Set width of the slider items( leave blank for full )"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:888
+#: build/inc/options/shortcodes/shortcode-options.php:898
 msgid "Show Tooltip"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:914
+#: build/inc/options/shortcodes/shortcode-options.php:924
 msgid "Image size"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:915
+#: build/inc/options/shortcodes/shortcode-options.php:925
 msgid "Choose the size that the image will have"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:928
+#: build/inc/options/shortcodes/shortcode-options.php:938
 msgid "Shape"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:929
+#: build/inc/options/shortcodes/shortcode-options.php:939
 msgid "Choose if the image will be roundrd or not"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:934
+#: build/inc/options/shortcodes/shortcode-options.php:944
 msgid "Rounded"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:935
+#: build/inc/options/shortcodes/shortcode-options.php:945
 msgid "Squared"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:936
+#: build/inc/options/shortcodes/shortcode-options.php:946
 msgid "Rectangular"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:940
+#: build/inc/options/shortcodes/shortcode-options.php:950
 msgid "Image Source"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:944
+#: build/inc/options/shortcodes/shortcode-options.php:954
 msgid "Place the source path of the image here"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:947
+#: build/inc/options/shortcodes/shortcode-options.php:957
 msgid "Image Alt"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:951
+#: build/inc/options/shortcodes/shortcode-options.php:961
 msgid "Place the alt of the image here"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:954
-#: build/inc/theme-metaboxes.php:183 build/inc/theme-metaboxes.php:439
+#: build/inc/options/shortcodes/shortcode-options.php:964
+#: build/inc/theme-metaboxes.php:180 build/inc/theme-metaboxes.php:448
 msgid "Link"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:958
+#: build/inc/options/shortcodes/shortcode-options.php:968
 msgid "Place a link here"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:962
+#: build/inc/options/shortcodes/shortcode-options.php:972
 msgid "Choose a color swatch"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:975
+#: build/inc/options/shortcodes/shortcode-options.php:985
 msgid "Add an icon to the image"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:993
+#: build/inc/options/shortcodes/shortcode-options.php:1003
 msgid "Featured staff member"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:1001
+#: build/inc/options/shortcodes/shortcode-options.php:1011
 msgid "Featured member"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:1002
+#: build/inc/options/shortcodes/shortcode-options.php:1012
 msgid "Select the staff member that will be featured"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:1009
+#: build/inc/options/shortcodes/shortcode-options.php:1019
 msgid "Image Position"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-options.php:1010
+#: build/inc/options/shortcodes/shortcode-options.php:1020
 msgid "Where the staff photo will be shown"
 msgstr ""
 
@@ -3049,51 +2911,73 @@ msgid "Add a background to the section"
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-section-background-options.php:26
+msgid "Background Video"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:30
+msgid "Enter url of a video to use for this section background."
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:33
 msgid "Opacity"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:27
-msgid "Set the opacity of the image"
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:34
+msgid "Set the opacity of the image and video backgrounds"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:38
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:45
 msgid "Background Size"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:39
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:46
 msgid "Choose the image size"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:43
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:50
 msgid "Cover"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:44
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:51
 msgid "Auto"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:49
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:56
 msgid "Background Repeat"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:54
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:61
 msgid "No repeat"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:55
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:62
 msgid "Repeat horizontally"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:56
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:63
 msgid "Repeat vertically"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:57
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:64
 msgid "Repeat horizontally and vertically"
 msgstr ""
 
-#: build/inc/options/shortcodes/shortcode-section-background-options.php:59
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:66
 msgid "Set if/how the image will be repeated"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:69
+msgid "Image Background Parallax"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:74
+msgid "Scroll"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcode-section-background-options.php:77
+msgid ""
+"Set the way the background scrolls with the page. Scroll = normal Fixed = "
+"Parallax effect."
 msgstr ""
 
 #: build/inc/options/shortcodes/shortcode-section-options.php:15
@@ -3444,233 +3328,237 @@ msgstr ""
 msgid "Reference to the source of the quote"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:42
+#: build/inc/theme-metaboxes.php:39
 msgid "Set the colour scheme that will be used for this item."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:59
+#: build/inc/theme-metaboxes.php:56
 msgid "Set the colour scheme that will be used for post."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:69
+#: build/inc/theme-metaboxes.php:66
 msgid "Service Image & Icon"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:75
+#: build/inc/theme-metaboxes.php:72
 msgid "Image Type"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:77
+#: build/inc/theme-metaboxes.php:74
 msgid "Services can show an uploaded Image, or an Icon or Both Image and Icon."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:80
+#: build/inc/theme-metaboxes.php:77
 msgid "Featured Image"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:82
+#: build/inc/theme-metaboxes.php:79
 msgid "Featured Image & Icon"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:83
+#: build/inc/theme-metaboxes.php:80
 msgid "Nothing"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:88
+#: build/inc/theme-metaboxes.php:85
 msgid ""
 "If you select Icon or Featured Image & Icon Image Type this is the icon that "
 "will be used."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:95
+#: build/inc/theme-metaboxes.php:92
 msgid ""
 "If you select Icon or Featured Image & Icon Image Type this is the animation "
 "that will be used when you hover over it."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:105
+#: build/inc/theme-metaboxes.php:102
 msgid "Site Header"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:111
+#: build/inc/theme-metaboxes.php:108
 msgid "Show Site Header"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:114
+#: build/inc/theme-metaboxes.php:111
 msgid ""
 "Removes the whole site header (logo and menu) - useful for landing pages"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:142
+#: build/inc/theme-metaboxes.php:139
 msgid "Page Header"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:143
+#: build/inc/theme-metaboxes.php:140
 msgid "Show or hide the header at the top of the page."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:153
+#: build/inc/theme-metaboxes.php:150
 msgid "Page Header Alignment"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:154
+#: build/inc/theme-metaboxes.php:151
 msgid "Align the text shown in the header left right or center."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:165
+#: build/inc/theme-metaboxes.php:162
 msgid "Page Header Subtitle"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:166
+#: build/inc/theme-metaboxes.php:163
 msgid "Add a subtitle to be used in the page header after the main title."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:173
+#: build/inc/theme-metaboxes.php:170
 msgid "Select the colour scheme to use for the header on this page."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:200
+#: build/inc/theme-metaboxes.php:197
 msgid "Link Type"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:201
+#: build/inc/theme-metaboxes.php:198
 msgid ""
 "Make this post link to something.  Default link will link to the single item "
 "page."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:205
+#: build/inc/theme-metaboxes.php:202
 msgid "Default Link"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:206
+#: build/inc/theme-metaboxes.php:203
 msgid "Page"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:207
+#: build/inc/theme-metaboxes.php:204
 msgid "Post"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:210
+#: build/inc/theme-metaboxes.php:207
 msgid "URL"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:215
+#: build/inc/theme-metaboxes.php:212
 msgid "Page Link"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:216
+#: build/inc/theme-metaboxes.php:213
 msgid "Choose a page to link this item to"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:224
+#: build/inc/theme-metaboxes.php:221
 msgid "Post Link"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:225
+#: build/inc/theme-metaboxes.php:222
 msgid "Choose a post to link this item to"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:233
+#: build/inc/theme-metaboxes.php:230
 msgid "Portfolio Link"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:234
+#: build/inc/theme-metaboxes.php:231
 msgid "Choose a portfolio item to link this item to"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:242
+#: build/inc/theme-metaboxes.php:239
 msgid "Category Link"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:243
+#: build/inc/theme-metaboxes.php:240
 msgid "Choose a category list to link this item to"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:250
+#: build/inc/theme-metaboxes.php:247
 msgid "URL Link"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:251
+#: build/inc/theme-metaboxes.php:248
 msgid "Choose a URL to link this item to"
 msgstr ""
 
 #: build/inc/theme-metaboxes.php:260
+msgid "No Link"
+msgstr ""
+
+#: build/inc/theme-metaboxes.php:269
 msgid "Link target"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:266
+#: build/inc/theme-metaboxes.php:275
 msgid "Link Target"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:267
+#: build/inc/theme-metaboxes.php:276
 msgid ""
 "Choose how this item will be opened up in the browser.  In a new window / "
 "tab or ths same window."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:273
+#: build/inc/theme-metaboxes.php:282
 msgid "Open in the parent frameset"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:274
+#: build/inc/theme-metaboxes.php:283
 msgid "Open in the full body of the window"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:282
+#: build/inc/theme-metaboxes.php:291
 msgid "Personal Details"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:288
+#: build/inc/theme-metaboxes.php:297
 msgid "Job Title"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:289
+#: build/inc/theme-metaboxes.php:298
 msgid "Sub header that is shown below the staff members name."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:294
+#: build/inc/theme-metaboxes.php:303
 msgid "Personal Moto Title"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:295
+#: build/inc/theme-metaboxes.php:304
 msgid ""
 "The cheeky title that pops up when a staff member image is hovered over."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:300
+#: build/inc/theme-metaboxes.php:309
 msgid "Personal Moto Text"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:301
+#: build/inc/theme-metaboxes.php:310
 msgid "The cheeky text that pops up when a staff member image is hovered over."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:312
+#: build/inc/theme-metaboxes.php:321
 msgid "Social Icon"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:313
+#: build/inc/theme-metaboxes.php:322
 msgid "Social Network Icon to show for this Staff Member"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:320
+#: build/inc/theme-metaboxes.php:329
 msgid "Social Link"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:321
+#: build/inc/theme-metaboxes.php:330
 msgid "Add the url to the staff members social network here."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:339
+#: build/inc/theme-metaboxes.php:348
 msgid "Portfolio Header Options"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:345
+#: build/inc/theme-metaboxes.php:354
 msgid "Portfolio Header Type"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:347
+#: build/inc/theme-metaboxes.php:356
 msgid ""
 "Select a header to use for this portfolio item single page.<br><strong>Big "
 "Image</strong> - Will add a full width header to the top of the page which "
@@ -3685,196 +3573,196 @@ msgid ""
 "regular full width page."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:350
+#: build/inc/theme-metaboxes.php:359
 msgid "Big Image"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:351
+#: build/inc/theme-metaboxes.php:360
 msgid "Smaller Image"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:352
+#: build/inc/theme-metaboxes.php:361
 msgid "Full Width Page"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:356
+#: build/inc/theme-metaboxes.php:365
 msgid "Header Title"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:359
+#: build/inc/theme-metaboxes.php:368
 msgid "Title that will be shown above your header description."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:360
+#: build/inc/theme-metaboxes.php:369
 msgid "Project Desscription"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:363
+#: build/inc/theme-metaboxes.php:372
 msgid "Header Description"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:367
+#: build/inc/theme-metaboxes.php:376
 msgid "Description will appear in single portfolio header before the content"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:371
+#: build/inc/theme-metaboxes.php:380
 msgid "Header Item Link"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:372
+#: build/inc/theme-metaboxes.php:381
 msgid ""
 "Link will appear in the single portfolio item underneath the skills list."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:382
+#: build/inc/theme-metaboxes.php:391
 msgid "Service Template"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:388
+#: build/inc/theme-metaboxes.php:397
 msgid "Service Page Template"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:390
+#: build/inc/theme-metaboxes.php:399
 msgid "Select a page template to use for this service"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:405
+#: build/inc/theme-metaboxes.php:414
 msgid "Swatch Colours"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:411
+#: build/inc/theme-metaboxes.php:420
 msgid "Background"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:413
+#: build/inc/theme-metaboxes.php:422
 msgid "Background colour of the swatch"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:418
+#: build/inc/theme-metaboxes.php:427
 msgid "Heading"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:420
+#: build/inc/theme-metaboxes.php:429
 msgid "Text headings colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:425
+#: build/inc/theme-metaboxes.php:434
 msgid "Heading Links"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:427 build/inc/theme-metaboxes.php:455
+#: build/inc/theme-metaboxes.php:436 build/inc/theme-metaboxes.php:464
 msgid "Link colour after link has been clicked"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:434
+#: build/inc/theme-metaboxes.php:443
 msgid "Text colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:441
+#: build/inc/theme-metaboxes.php:450
 msgid "Text links colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:446
+#: build/inc/theme-metaboxes.php:455
 msgid "Link Hover"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:448
+#: build/inc/theme-metaboxes.php:457
 msgid "Link colour when hovered over"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:453
+#: build/inc/theme-metaboxes.php:462
 msgid "Link Active"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:460
+#: build/inc/theme-metaboxes.php:469
 msgid "Icons"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:462
+#: build/inc/theme-metaboxes.php:471
 msgid "Colour of all icons"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:467
+#: build/inc/theme-metaboxes.php:476
 msgid "Overlay"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:469
+#: build/inc/theme-metaboxes.php:478
 msgid "Colour for overlay areas (see bottom footer stripe)"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:474
+#: build/inc/theme-metaboxes.php:483
 msgid "Form Background"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:476
+#: build/inc/theme-metaboxes.php:485
 msgid "Form elements background colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:481
+#: build/inc/theme-metaboxes.php:490
 msgid "Form Text Colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:483
+#: build/inc/theme-metaboxes.php:492
 msgid "Colour of text inside form elements"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:488
+#: build/inc/theme-metaboxes.php:497
 msgid "Woocommerce button Colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:490
+#: build/inc/theme-metaboxes.php:499
 msgid "Background Colour of woocommerce buttons"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:495
+#: build/inc/theme-metaboxes.php:504
 msgid "Woocommerce text Colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:497
+#: build/inc/theme-metaboxes.php:506
 msgid "Text Colour of woocommerce buttons"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:502
+#: build/inc/theme-metaboxes.php:511
 msgid "Woocommerce product Colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:504
+#: build/inc/theme-metaboxes.php:513
 msgid "Text Colour on woocommerce product lists"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:509
+#: build/inc/theme-metaboxes.php:518
 msgid "Woocommerce link Colour"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:511
+#: build/inc/theme-metaboxes.php:520
 msgid "Link Colour on woocommerce product lists"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:520 build/inc/theme-metaboxes.php:537
+#: build/inc/theme-metaboxes.php:529 build/inc/theme-metaboxes.php:546
 msgid "Category Header Type"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:538
+#: build/inc/theme-metaboxes.php:547
 msgid "Select the type of header to be displayed in your category page"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:543
+#: build/inc/theme-metaboxes.php:552
 msgid "No Header"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:549
+#: build/inc/theme-metaboxes.php:558
 msgid "Category Header subtitle"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:552
+#: build/inc/theme-metaboxes.php:561
 msgid "Subtitle that will be shown next to your header title."
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:553
+#: build/inc/theme-metaboxes.php:562
 msgid "category subtitle"
 msgstr ""
 
-#: build/inc/theme-metaboxes.php:557
+#: build/inc/theme-metaboxes.php:566
 msgid ""
 "Choose the revolution slider that you want to display in the category page"
 msgstr ""

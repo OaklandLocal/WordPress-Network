@@ -8,12 +8,12 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license **LICENSE**
- * @version 1.3.4
+ * @version 1.5
  */
 
 add_theme_support( 'woocommerce' );
 
-if( is_woocommerce_active() ) {
+if( oxy_is_woocommerce_active() ) {
      // Dequeue WooCommerce stylesheet(s)
     if ( version_compare( WOOCOMMERCE_VERSION, "2.1" ) >= 0 ) {
         // WooCommerce 2.1 or above is active

@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license http://wiki.envato.com/support/legal-terms/licensing-terms/
- * @version 1.3.4
+ * @version 1.5
  */
 $post_swatch = get_post_meta( $post->ID, THEME_SHORT. '_swatch', true );
 // calculate page numbers

@@ -8,7 +8,7 @@
  *
  * @copyright (c) 2013 Oxygenna.com
  * @license **LICENSE**
- * @version 1.3.4
+ * @version 1.5
  */
 
 global $oxy_theme;
@@ -23,10 +23,7 @@ $oxy_theme->register_metabox( array(
             'name'    => __('Citation', 'swatch-admin-td'),
             'desc'    => __('Reference to the source of the quote', 'swatch-admin-td'),
             'id'      => 'citation',
-            'type'    => 'text',
-            'attr'    => array(
-                 'name' => 'citation'
-            ),
+            'type'    => 'text'
         ),
     )
 ));
@@ -178,12 +175,12 @@ $oxy_theme->register_metabox( array(
         ),
     )
 ));
-$oxy_theme->register_metabox(array(
+$link_options = array(
     'id'    => 'link_metabox',
     'title' => __('Link', 'swatch-admin-td'),
     'priority' => 'default',
     'context'  => 'advanced',
-    'pages'    => array('oxy_slideshow_image', 'oxy_service', 'oxy_staff', 'oxy_portfolio_image'),
+    'pages'    => array('oxy_service', 'oxy_staff', 'oxy_portfolio_image'),
     'javascripts' => array(
         array(
             'handle' => 'slider_links_options_script',
@@ -202,14 +199,14 @@ $oxy_theme->register_metabox(array(
             'id'   => 'link_type',
             'type' => 'select',
             'options' => array(
-                'none'      => __('Default Link', 'swatch-admin-td'),
+                'default'   => __('Default Link', 'swatch-admin-td'),
                 'page'      => __('Page', 'swatch-admin-td'),
                 'post'      => __('Post', 'swatch-admin-td'),
                 'portfolio' => __('Portfolio', 'swatch-admin-td'),
                 'category'  => __('Category', 'swatch-admin-td'),
                 'url'       => __('URL', 'swatch-admin-td')
             ),
-            'default' => 'none',
+            'default' => 'default',
         ),
         array(
             'name'     => __('Page Link', 'swatch-admin-td'),
@@ -254,7 +251,19 @@ $oxy_theme->register_metabox(array(
             'default' =>  '',
         ),
     ),
-));
+);
+
+$oxy_theme->register_metabox( $link_options );
+
+// modify link options metabox for slideshow image before registering
+unset($link_options['fields'][0]['options']['default']);
+$link_options['fields'][0]['options']['none'] = __('No Link', 'swatch-admin-td');
+$link_options['fields'][0]['default'] = 'none';
+$link_options['pages'] = array('oxy_slideshow_image');
+$link_options['id'] = 'slide_link_metabox';
+
+$oxy_theme->register_metabox( $link_options );
+
 $oxy_theme->register_metabox( array(
     'id' => 'services_link_metabox',
     'title' => __('Link target', 'swatch-admin-td'),

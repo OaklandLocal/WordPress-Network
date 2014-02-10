@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Swatch Frontend Translation File 1.3.4\n"
+"Project-Id-Version: Swatch Frontend Translation File 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-04 09:03+0200\n"
+"POT-Creation-Date: 2014-01-20 15:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,99 +33,103 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: build/inc/frontend.php:94
+#: build/inc/frontend.php:102
 msgid "Primary Navigation"
 msgstr ""
 
-#: build/inc/frontend.php:95
+#: build/inc/frontend.php:103
 msgid "Account Navigation"
 msgstr ""
 
-#: build/inc/frontend.php:290
+#: build/inc/frontend.php:300
 msgid "Pingback:"
 msgstr ""
 
-#: build/inc/frontend.php:290
+#: build/inc/frontend.php:300
 msgid "(Edit)"
 msgstr ""
 
-#: build/inc/frontend.php:311
+#: build/inc/frontend.php:321
 msgid "Reply"
 msgstr ""
 
-#: build/inc/frontend.php:367
+#: build/inc/frontend.php:377
 msgid "YOUR NAME *"
 msgstr ""
 
-#: build/inc/frontend.php:368
+#: build/inc/frontend.php:378
 msgid "YOUR EMAIL *"
 msgstr ""
 
-#: build/inc/frontend.php:372
+#: build/inc/frontend.php:382
 #, php-format
 msgid "Required fields are marked %s"
 msgstr ""
 
-#: build/inc/frontend.php:375
+#: build/inc/frontend.php:385
 msgid "YOUR MESSAGE"
 msgstr ""
 
-#: build/inc/frontend.php:376
+#: build/inc/frontend.php:386
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: build/inc/frontend.php:377
+#: build/inc/frontend.php:387
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: build/inc/frontend.php:383
+#: build/inc/frontend.php:393
 msgid "Add your comment"
 msgstr ""
 
-#: build/inc/frontend.php:384
+#: build/inc/frontend.php:394
 msgid "Leave a Reply"
 msgstr ""
 
-#: build/inc/frontend.php:385
+#: build/inc/frontend.php:395
 msgid "Cancel reply"
 msgstr ""
 
-#: build/inc/frontend.php:386
+#: build/inc/frontend.php:396
 msgid "Add comment"
 msgstr ""
 
-#: build/inc/frontend.php:1110
+#: build/inc/frontend.php:1124
 msgid "SEARCH"
 msgstr ""
 
-#: build/inc/frontend.php:1134
+#: build/inc/frontend.php:1148
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: build/inc/frontend.php:1135
+#: build/inc/frontend.php:1149
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: build/inc/frontend.php:1201
+#: build/inc/frontend.php:1215
 msgid "Next page"
 msgstr ""
 
-#: build/inc/frontend.php:1202
+#: build/inc/frontend.php:1216
 msgid "Previous page"
 msgstr ""
 
-#: build/inc/frontend.php:1301
+#: build/inc/frontend.php:1328
 #, php-format
 msgid "Search Results: &ldquo;%s&rdquo;"
 msgstr ""
 
-#: build/inc/frontend.php:1303
+#: build/inc/frontend.php:1330
 #, php-format
 msgid "&nbsp;&ndash; Page %s"
+msgstr ""
+
+#: build/inc/options/shortcodes/shortcodes.php:594
+msgid "all"
 msgstr ""
 
 #: build/inc/options/widgets/default_overrides.php:23
@@ -164,6 +168,14 @@ msgstr ""
 #: build/partials/content-video.php:51 build/partials/content.php:36
 #, php-format
 msgid "Permalink to %s"
+msgstr ""
+
+#: build/partials/content-portfolio-single.php:64
+msgid "Previous"
+msgstr ""
+
+#: build/partials/content-portfolio-single.php:69
+msgid "Next"
 msgstr ""
 
 #: build/partials/content-search.php:39

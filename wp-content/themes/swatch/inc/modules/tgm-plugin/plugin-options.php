@@ -60,6 +60,15 @@ function my_theme_register_required_plugins() {
             'force_deactivation'    => false,
         ),
         array(
+            'name'                  => 'Layers Slider',
+            'slug'                  => 'LayerSlider',
+            'source'                => get_stylesheet_directory() . '/inc/modules/tgm-plugin/plugins/layerslider.zip',
+            'required'              => false,
+            'version'               => '5.0.2',
+            'force_activation'      => false,
+            'force_deactivation'    => false,
+        ),
+        array(
             'name'                  => 'Envato Wordpress Toolkit',
             'slug'                  => 'envato-wordpress-toolkit',
             'source'                => get_stylesheet_directory() . '/inc/modules/tgm-plugin/plugins/envato-wordpress-toolkit.zip',
