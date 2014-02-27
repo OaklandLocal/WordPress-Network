@@ -4,9 +4,11 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-06-12T08:55:50+00:00\n"
+"PO-Revision-Date: 2014-02-16T10:43:51+00:00\n"
 "Last-Translator: 1231 <1231>\n"
 "Last-Translator: OWenT <http://www.owent.net>\n"
+"Last-Translator: peteryeung <http://winplus.tk>\n"
+"Last-Translator: jflycn <jflycn@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,10 +39,10 @@ msgid "See the debug logs"
 msgstr "请参阅调试日志"
 
 msgid "1=log only the critical errors;"
-msgstr "1 =记录只有严重的错误;"
+msgstr "1=记录只有严重的错误;"
 
 msgid "2=log only the critical errors and the standard errors;"
-msgstr "2 =仅记录严重错误和标准错误;"
+msgstr "2=仅记录严重错误和标准错误;"
 
 msgid "3=log only the critical errors, the standard errors and the warnings;"
 msgstr "3=仅记录严重错误，标准错误和警告;"
@@ -49,109 +51,109 @@ msgid "4=log information;"
 msgstr "4=记录信息;"
 
 msgid "5=log verbose;"
-msgstr "5 =日志详细;"
+msgstr "5=日志详细;"
 
 msgid "Multisite Management"
 msgstr "多站点管理"
 
 msgid "Do you want to allow sub-blogs to modify the translations of the plugins:"
-msgstr "你要允许子博客的插件修改的翻译："
+msgstr "你是否允许子博客修改插件的翻译："
 
 msgid "If this option is unchecked, the translation tab won't be displayed in the blog administration panel."
-msgstr "如果未选中此选项，翻译“选项卡不会显示在博客的管理面板。"
+msgstr "如果未选中此选项，翻译选项卡不会显示在博客的管理面板。"
 
 msgid "Summary page for the plugins developped with the SL framework"
-msgstr "摘要“页上的插件大发展的SL框架"
+msgstr "摘要页：基于 SL 框架开发的插件"
 
 msgid "Plugin name"
-msgstr "插件名称"
+msgstr "插件名"
 
 msgid "Description"
 msgstr "描述"
 
 msgid "There is a SQL database for this plugin"
-msgstr "这个插件是一个SQL数据库"
+msgstr "这个插件有一个SQL数据库"
 
 msgid "Version: %s by %s"
-msgstr "版本：%s %s 的"
+msgstr "版本：%s 的 %s"
 
 msgid "For now, you have installed %s plugins including %s plugins developped with the SedLex's framework"
-msgstr "恭喜，您已经安装了 %s 插件, %s 插件基于SedLex&#039;s framework开发"
+msgstr "目前你安装了 %s 个插件，其中 %s 个基于 SL 框架开发"
 
 msgid "The core plugin is located at %s"
-msgstr "插件的核心组件位于 %s"
+msgstr "核心插件位于 %s"
 
 msgid "List of SL plugins"
-msgstr "SL插件列表"
+msgstr "SL 插件清单"
 
 msgid "Parameters of the framework"
-msgstr "框架参数"
+msgstr "框架的参数"
 
 msgid "Manage translation of the framework"
-msgstr "管理框架国际化配置"
+msgstr "管理框架的翻译"
 
 msgid "The folder %s is not %s !"
-msgstr "目录 %s 不是 %s"
+msgstr "文件夹 %s 不是 %s ！"
 
 msgid "The file %s is not %s !"
-msgstr "文件 %s 不是 %s"
+msgstr "文件 %s 不是 %s ！"
 
 msgid "The folder %s does not exists and cannot be created !"
-msgstr "目录 %s 不存在，且无法创建"
+msgstr "文件夹 %s 不存在且不能被创建"
 
 msgid "The file %s does not exists and cannot be created !"
-msgstr "文件 %s 不存在，且无法创建"
+msgstr "文件 %s 不存在且不能被创建"
 
 msgid "There are some issues with folders rights. Please corret them as soon as possible as they could induce bugs and instabilities."
-msgstr "检测到文件夹权限不足，请尽快修复以免引起BUG或影响稳定性"
+msgstr "文件夹的权限有一些问题。请尽快纠正，因为它们可能引起错误和不稳定性。"
 
 msgid "Please see below:"
-msgstr "请见下文"
+msgstr "请参见下文："
 
 msgid "Close popup"
-msgstr "关闭弹出式菜单"
+msgstr "关闭弹出窗口"
 
 msgid "Here, you may configure three levels of translations: at the plugin level, at the framework level, and at the dashboard level."
-msgstr "您可以在这里配置三种国际化配置, 插件, 框架 和 信息面板"
+msgstr "在这里，你可以配置三个层次的翻译：插件，框架，或是仪表板。"
 
 msgid "Please be informed that your current language is %s. Text will be translated if a translation is available."
-msgstr "请确保您当前语言是 %s , 文本将会尽可能被翻译成当前语言"
+msgstr "您的当前语言是%s。如果翻译文本存在，插件将被翻译。"
 
 msgid "If you want to modify the language, please go in %s and find %s or %s. The second argument is your language and you may modify it as you want."
-msgstr "如果您想修改语言,请转到 %s 后找到 %s 或 %s, 第二个参数是您的语言，您可以自由地修改它"
+msgstr "如果你想修改语言，请到%s并寻找%s或是%s。第二个参数是你的语言，你可以修改它。"
 
 msgid "Translations available for this plugin (i.e. %s)"
-msgstr "当前插件可用的国际化翻译(即 %s)"
+msgstr "这个插件有可用翻译 (%s)"
 
 msgid "Translations available for the SL framework (stored in %s)"
-msgstr "当前框架可用的国际化翻译(即 %s)"
+msgstr "SL框架有可用翻译 (位于 %s)"
 
 msgid "Adding a new translation for this language: %s"
-msgstr "为语言 %s 添加新的翻译文件"
+msgstr "添加这种语言的翻译：%s"
 
 msgid "Sentence to translate"
-msgstr "要翻译的条目"
+msgstr "要翻译的句子"
 
 msgid "Translation"
 msgstr "翻译"
 
 msgid "Your name:"
-msgstr "您的名字:"
+msgstr "您的名字："
 
 msgid "(if your name/pseudo is already in the list, there is no need to fill this input)"
-msgstr "(如果您的名字或昵称已经在列表中, 则不需要填写此项)"
+msgstr "（如果你的名字/伪已经在列表中，无需填写此项）"
 
 msgid "Your email or your website:"
-msgstr "您的E-mail或您的站点"
+msgstr "您的电子邮件或网站："
 
 msgid "Create the translation files"
 msgstr "创建翻译文件"
 
 msgid "Add a new translation"
-msgstr "添加新翻译文件"
+msgstr "添加一个新的翻译"
 
 msgid "Modifying the translation for this language: %s"
-msgstr "修改语言 %s 的翻译文件"
+msgstr "修改此语言的翻译档：%s"
 
 msgid "Confirmation"
 msgstr "配置"
@@ -343,7 +345,7 @@ msgid "No email have been provided for the author of this plugin. Therefore, the
 msgstr "本插件的作者没有提供电子邮件地址，因此反馈不可用"
 
 msgid "The number of occurrence of %s does not match in both string. Please note that the string %s will be replaced with a contextual string."
-msgstr "当前配置中%s的出现字数不匹配. 注意 %s 会被替换为指定功能的字符串"
+msgstr "%s在这两个字符串中不匹配。请注意，上下文字符串将被替换的字符串%s。"
 
 msgid "Modify the translation files"
 msgstr "修改翻译文件"
@@ -437,4 +439,7 @@ msgstr "如果您喜欢这个插件, 希望您捐赠给我.(这个插件完全�
 
 msgid "This is not mandatory! but it may be a sign that this plugin fits you needs: it makes me happy..."
 msgstr "这不是强制性的! 但是这表明您喜欢我的插件, 这会让我备受鼓舞"
+
+msgid "The following plugins have been developed by the author and are not yet been installed:"
+msgstr "以下由当前作者开发的插件您可能会感兴趣(未被安装)"
 
