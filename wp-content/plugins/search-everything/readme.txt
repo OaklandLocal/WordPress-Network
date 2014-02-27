@@ -2,8 +2,8 @@
 Contributors: zemanta
 Tags: search, search highlight, tag search, category search, category exclusion, comment search, page search, admin, seo, post filter
 Requires at least: 3
-Tested up to: 3.8
-Stable tag: 7.0.2
+Tested up to: 3.8.1
+Stable tag: 7.0.4
 
 Search Everything increases WordPress' default search functionality in three easy steps.
 
@@ -21,7 +21,6 @@ Search Everything improves WordPress default search functionality without modify
 * Activate
 * Configure options
 * Search!
-
 
 = What it does: =
 
@@ -93,10 +92,17 @@ Please open a new issue at [github Issues](https://github.com/zemanta/search-eve
 
 == Changelog ==
 
+= 7.0.4 =
+* Urgent bugfix - changed migration script
+
+= 7.0.3 =
+* Fixed vulnerability issue in se_search_default and started escaping terms
+* Refactored code, extracted html from PHP code
+* Added support for ajax call
+
+
 = 7.0.2 =
 * Added config file with installation and migration functions
 * Refactored code, removed Yes options
 * Replaced deprecated functions
 
-
-[github Issues](https://github.com/sproutventure/search-everything-wordpress-plugin/issues "Github Issues")

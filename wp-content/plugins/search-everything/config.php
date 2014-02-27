@@ -72,7 +72,7 @@ function se_upgrade() {
 
 	if($version) {
 		if(version_compare($version, SE_VERSION, '<')) {
-			call_user_func('wp_se_migrate_' . str_replace('.', '_', $version));
+			call_user_func('se_migrate_' . str_replace('.', '_', $version));
 			se_upgrade();
 		}
 	} else {
@@ -84,6 +84,27 @@ function se_upgrade() {
 			se_install();
 		}
 	}
+}
+
+function se_migrate_7_0_3() {
+
+	$se_meta = get_option('se_meta', false);
+
+	if ($se_meta) {
+		$se_meta['version'] = '7.0.4';
+	}
+	update_option('se_meta',$se_meta);
+}
+
+
+function se_migrate_7_0_2() {
+
+	$se_meta = get_option('se_meta', false);
+
+	if ($se_meta) {
+		$se_meta['version'] = '7.0.3';
+	}
+	update_option('se_meta',$se_meta);
 }
 
 
@@ -193,5 +214,3 @@ function se_get_default_options() {
 
 	return $se_options;
 }
-
-?>
